@@ -1,5 +1,5 @@
 import type { RequestHandler } from './$types';
-import { json } from '@sveltejs/kit';
+import { json, redirect } from '@sveltejs/kit';
 import type { LoginPayload } from '../../../models/login/loginPayload';
 
 export const POST: RequestHandler = async ({ request, url, locals }): Promise<Response> => {
@@ -7,5 +7,6 @@ export const POST: RequestHandler = async ({ request, url, locals }): Promise<Re
 
 	console.log(email);
 	console.log(rememberMe);
+
 	return json({});
 };

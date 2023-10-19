@@ -1,4 +1,4 @@
 export interface LoginPayload {
-	email: string;
+	phoneNumber: string;
 	rememberMe: boolean;
 }

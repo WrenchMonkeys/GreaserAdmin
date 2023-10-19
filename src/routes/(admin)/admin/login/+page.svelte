@@ -2,6 +2,7 @@
   import { error } from "@sveltejs/kit";
   import type { EventHandler } from "svelte/elements";
   import PhoneNumberInput from "$lib/components/PhoneNumberInput.svelte";
+  import { goto } from "$app/navigation";
 
   let countryCode = '1'
   let phoneNumber = '';
@@ -9,44 +10,27 @@
   let rememberMe = false;
   let disabled = true;
 
-  const handleLogin = () => {
-
-    if (!phoneNumber?.includes('@mobilegreaser.com') && phoneNumber !== '') {
-      errorMessage = 'Invalid phone number provided.';
-    }
-
-    fetch('/api/login', {
+  const handleLogin = async () => {
+    const submitPhoneNumberResponse = await fetch('/api/login', {
       method: 'POST',
       body: JSON.stringify({
-        phoneNumber,
+        phoneNumber: phoneNumber.replace(/\D+/g, ''),
         rememberMe,
       }),
       headers: {
         'Accept': 'application/json'
       }
     })
-  }
 
-
-  const validatePhoneNumberField: EventHandler = (e: Event) => {
-    const { target } = e;
-
-    if (target instanceof HTMLInputElement) {
-      const email = target.value;
-
-      if (email !== '' && !email?.includes('@mobilegreaser.com')) {
-        errorMessage = 'Invalid email provided.';
-      } else {
-        errorMessage = '';
-        disabled = false;
-      }
-
+    if (submitPhoneNumberResponse.ok) {
+      await goto(`/admin/submitOTP?phoneNumber=${phoneNumber.replace(/\D+/g, '')}`);
     } else {
-      throw Error("Unknown input event");
+      errorMessage = submitPhoneNumberResponse.statusText;
     }
   }
 
-  $:
+  $: disabled = phoneNumber?.length !== 14;
+
 </script>
 
 <div class="container d-flex flex-row min-vh-100 p-2">
@@ -56,8 +40,8 @@
   <div class="right w-50">
     <div class="w-75 mx-auto h-100 d-flex flex-column justify-content-center align-items-center">
       <header class="mb-1">
-        <h4 class="p-3 mb-0 text-center">Sign in</h4>
-        <p class="text-secondary text-center">Enter your phone number to sign in</p>
+        <h4 class="p-3 mb-0 text-center">Enter your phone number</h4>
+        <p class="text-secondary text-center">We'll send you a code to verify</p>
       </header>
 
       <form action="" class="w-100 p-3">

@@ -7,16 +7,16 @@
   const handlePhoneNumberFormat = (currPhoneNumber: string) => {
     let arr = currPhoneNumber.split('');
 
-    if (arr.length >= 4 && arr[3] !== '-') {
+    if (arr.length >= 4 && arr[0] !== '(' && arr[4] !== ')') {
       const split1 = arr.slice(0, 3);
-      const split2 = arr.slice(3,);
-      arr = [...split1, '-', ...split2];
+      const split2 = arr.slice(3, );
+      arr = ['(', ...split1, ') ', ...split2];
 
     }
 
-    if (arr.length >= 8 && arr[7] !== '-') {
-      const split1 = arr.slice(0, 7);
-      const split2 = arr.slice(7,);
+    if (arr.length > 9 && arr[9] !== '-') {
+      const split1 = arr.slice(0, 9);
+      const split2 = arr.slice(9,);
       arr = [...split1, '-', ...split2];
     }
 
@@ -33,7 +33,7 @@
     {/each}
   </select>
   <p class="px-3 mt-auto mb-auto text-center font-weight-bold">+{countryCode}</p>
-  <input type="tel" bind:value={phoneNumber} class="phone-number-input flex-fill" maxlength="12" minlength="0" pattern="\d{10}">
+  <input type="tel" bind:value={phoneNumber} class="phone-number-input flex-fill" maxlength="14" minlength="0" pattern="\d{10}">
 </div>
 
 <style>

@@ -1,4 +1,7 @@
-<script>
+<script lang="ts">
+	import type { User } from '$lib/models/user';
+
+	let user: User | null = null;
 
 </script>
 
@@ -11,17 +14,23 @@
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">Home</a>
+					<a class="nav-link active" aria-current="page" href="/">Home</a>
 				</li>
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">accounts</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">roles</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="#">logout</a>
-				</li>
+				{#if user}
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">accounts</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">roles</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="#">logout</a>
+					</li>
+				{:else}
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/admin/login">login</a>
+					</li>
+				{/if}
 			</ul>
 		</div>
 	</div>

@@ -14,12 +14,10 @@ export const POST: RequestHandler = async ({ request, url, locals }) => {
 
 	if (usernameAvailabilityResp.ok) {
 		const password = getRandomValues(new Uint32Array(10)).join('');
-		console.log(password);
 		const registerResponse = await registerAccount(phoneNumber, password);
 
 		if (!registerResponse.ok) {
 			const registerError = await registerResponse.json();
-			console.log(registerError);
 			throw error(500, registerError.error);
 		}
 	}

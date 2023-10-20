@@ -18,10 +18,7 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	if (!submitOTPResponse.ok) {
 		throw error(submitOTPResponse?.status, responseBody.message);
 	}
+	const { token, account: user } = responseBody;
 
-	const {
-		result: { id_token }
-	} = responseBody;
-
-	return json({ token: id_token });
+	return json({ token, user });
 };

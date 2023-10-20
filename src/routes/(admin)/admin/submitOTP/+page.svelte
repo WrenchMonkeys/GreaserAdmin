@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/stores'
+  import { goto } from "$app/navigation";
 
   let errorMessage = '';
   let otpCode = '';
@@ -18,8 +19,10 @@
 
     if (!submitOTPResponse.ok) {
       errorMessage = responseData.message;
+    } else {
+      await goto('/admin/')
     }
-  }
+  };
 
   $: disabled = otpCode?.length !== 6;
 </script>

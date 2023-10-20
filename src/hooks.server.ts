@@ -15,7 +15,7 @@ const authenticationHandler: Handle = async ({ event, resolve }): Promise<Respon
 
 const authorizationHandler: Handle = async ({ event, resolve }): Promise<Response> => {
 	if (
-		/\/admin\/(?:(?!login|submitOTP)\w+)?$/gm.test(event.url.pathname) &&
+		/\/admin(?:\/(?!login|submitOTP)\w+)?$/gm.test(event.url.pathname) &&
 		event.locals?.user == null
 	) {
 		console.log(`user is not authorized to access ${event.url.pathname}`);

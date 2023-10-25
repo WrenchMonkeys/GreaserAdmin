@@ -1,0 +1,1 @@
+Implement a table that displays all the services we currently offer and the vehicles that are covered in that service, as well as the rates per.

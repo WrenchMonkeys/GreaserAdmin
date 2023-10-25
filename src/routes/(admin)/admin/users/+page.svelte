@@ -1,0 +1,1 @@
+Implement a table that displays all registered users

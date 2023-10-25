@@ -1,0 +1,1 @@
+Implement a table with a view of all vehicles and their configurations we currently support

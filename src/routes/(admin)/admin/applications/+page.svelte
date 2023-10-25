@@ -1,0 +1,1 @@
+this view will displays all technician applications and their states

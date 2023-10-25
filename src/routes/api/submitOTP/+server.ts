@@ -1,8 +1,8 @@
 import type { RequestHandler } from './$types';
 import { API_GATEWAY_URL } from '$env/static/private';
-import { error, json } from '@sveltejs/kit';
+import { error, json, redirect } from '@sveltejs/kit';
 
-export const POST: RequestHandler = async ({ request, fetch }) => {
+export const POST: RequestHandler = async ({ request, fetch, cookies }) => {
 	const data = await request.json();
 
 	const submitOTPResponse = await fetch(new URL('/api/authn/submit-otp-code', API_GATEWAY_URL), {
@@ -18,7 +18,18 @@ export const POST: RequestHandler = async ({ request, fetch }) => {
 	if (!submitOTPResponse.ok) {
 		throw error(submitOTPResponse?.status, responseBody.message);
 	}
+
 	const { token, account: user } = responseBody;
 
-	return json({ token, user });
+	cookies.set('token', token);
+
+	return json(
+		{},
+		{
+			status: 200,
+			headers: new Headers({
+				'set-cookie': `token=${token}; Max-Age=${15 * 60}; Path=/; HttpOnly`
+			})
+		}
+	);
 };

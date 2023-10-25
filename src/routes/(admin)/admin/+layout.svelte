@@ -1,7 +1,10 @@
 <script lang="ts">
-	import type { User } from '$lib/models/user';
+	import type {PageData} from "./$types";
+	import type User from "$lib/models/user";
 
-	let user: User | null = null;
+	export let data: PageData;
+
+	let user: User | undefined = data?.user;
 
 </script>
 
@@ -13,20 +16,23 @@
 		</button>
 		<div class="collapse navbar-collapse" id="navbarSupportedContent">
 			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				<li class="nav-item">
-					<a class="nav-link active" aria-current="page" href="/">Home</a>
-				</li>
 				{#if user}
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">accounts</a>
+						<a class="nav-link active" aria-current="page" href="/admin/">Home</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">roles</a>
+						<a class="nav-link active" aria-current="page" href="/admin/users">accounts</a>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="#">logout</a>
+						<a class="nav-link active" aria-current="page" href="/admin/roles">roles</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/admin/logout">logout</a>
 					</li>
 				{:else}
+					<li class="nav-item">
+						<a class="nav-link active" aria-current="page" href="/">Home</a>
+					</li>
 					<li class="nav-item">
 						<a class="nav-link active" aria-current="page" href="/admin/login">login</a>
 					</li>

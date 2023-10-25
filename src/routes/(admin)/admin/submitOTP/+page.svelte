@@ -1,10 +1,10 @@
 <script lang="ts">
   import { page } from '$app/stores'
-  import { goto } from "$app/navigation";
 
   let errorMessage = '';
   let otpCode = '';
   let disabled: boolean = true;
+  export let data;
   const phoneNumber = $page.url.searchParams.get('phoneNumber');
 
   const handleSubmitOTP = async () => {
@@ -15,12 +15,12 @@
         code: otpCode
       }),
     });
-    const responseData = await submitOTPResponse.json()
 
-    if (!submitOTPResponse.ok) {
-      errorMessage = responseData.message;
+    if (submitOTPResponse.ok) {
+      // await goto('/admin/')
     } else {
-      await goto('/admin/')
+      const data = await submitOTPResponse.json();
+      errorMessage = data?.message;
     }
   };
 
@@ -34,7 +34,7 @@
         <p class="text-secondary text-center">An code has been sent to {phoneNumber} submit it below.</p>
       </header>
 
-      <form on:submit|preventDefault={handleSubmitOTP} method="POST" class="w-100 p-3">
+      <form class="w-100 p-3">
         <input class="form-control" type="text" bind:value={otpCode} placeholder="input your OTP code here" maxlength="6">
         <div class="p-2 mb-3">
           {#if errorMessage}
@@ -42,7 +42,7 @@
           {/if}
         </div>
         <div class="d-grid gap-2 p-2 mb-3">
-          <button class="btn btn-primary btn-lg" type="submit" {disabled}>Sign in</button>
+          <button class="btn btn-primary btn-lg" on:click={handleSubmitOTP} {disabled}>Sign in</button>
         </div>
       </form>
     </div>

@@ -2,7 +2,7 @@ import type { RequestHandler } from './$types';
 import { API_GATEWAY_URL } from '$env/static/private';
 import { error, json, redirect } from '@sveltejs/kit';
 
-export const POST: RequestHandler = async ({ request, fetch, cookies }) => {
+export const POST: RequestHandler = async ({ request, fetch, cookies, locals }) => {
 	const data = await request.json();
 
 	const submitOTPResponse = await fetch(new URL('/api/authn/submit-otp-code', API_GATEWAY_URL), {
@@ -21,15 +21,11 @@ export const POST: RequestHandler = async ({ request, fetch, cookies }) => {
 
 	const { token, account: user } = responseBody;
 
-	cookies.set('token', token);
+	cookies.set('token', token, {
+		httpOnly: true,
+		maxAge: 15 * 60,
+		path: '/'
+	});
 
-	return json(
-		{},
-		{
-			status: 200,
-			headers: new Headers({
-				'set-cookie': `token=${token}; Max-Age=${15 * 60}; Path=/; HttpOnly`
-			})
-		}
-	);
+	throw redirect(302, '/admin');
 };

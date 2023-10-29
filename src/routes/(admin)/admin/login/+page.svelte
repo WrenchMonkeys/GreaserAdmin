@@ -33,18 +33,18 @@
 
 </script>
 
-<div class="container d-flex flex-row min-vh-100 p-2">
-  <div class="left w-50 d-flex justify-content-center align-items-center">
+<div class="container-xl flex flex-row min-h-screen p-2">
+  <div class="left w-1/2 flex justify-center items-center">
     <dotlottie-player src="https://lottie.host/33109283-ad5b-4ab3-be2e-b34a96bb4af4/kCq2ptSqX7.json" background="transparent" speed="1" style="width: 50%; height: auto;" loop autoplay/>
   </div>
-  <div class="right w-50">
-    <div class="w-75 mx-auto h-100 d-flex flex-column justify-content-center align-items-center">
+  <div class="right w-1/2">
+    <div class="w-3/4 mx-auto h-full flex flex-col justify-center align-center">
       <header class="mb-1">
         <h4 class="p-3 mb-0 text-center">Enter your phone number</h4>
         <p class="text-secondary text-center">We'll send you a code to verify</p>
       </header>
 
-      <form action="" class="w-100 p-3">
+      <form action="" class="w-3/4 mx-auto p-3">
         <div class="p-2 mb-3">
           <PhoneNumberInput bind:countryCode bind:phoneNumber/>
           {#if errorMessage}
@@ -55,7 +55,7 @@
           <input class="form-check-input" type="checkbox" id="rememberMe" name="rememberMe" bind:checked={rememberMe}>
           <label for="rememberMe" class="form-label">Remember me</label>
         </div>
-        <div class="d-grid gap-2 p-2 mb-3">
+        <div class="grid gap-2 p-2 mb-3">
           <button class="btn btn-primary btn-lg" type="button" on:click={handleLogin} {disabled}>Sign in</button>
         </div>
       </form>

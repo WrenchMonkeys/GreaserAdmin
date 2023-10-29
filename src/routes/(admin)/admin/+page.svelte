@@ -1,9 +1,11 @@
 <script>
   export let data;
+
+  $: user = data?.user;
 </script>
 
 admin home page
 
 <pre>
-  {JSON.stringify(data, null, 2)}
+  {JSON.stringify(user, null, 2)}
 </pre>

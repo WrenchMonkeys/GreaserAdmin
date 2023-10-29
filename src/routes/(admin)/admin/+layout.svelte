@@ -7,40 +7,41 @@
 	let user: User | undefined = data?.user;
 
 </script>
-
-<nav class="navbar navbar-expand-lg navbar-light bg-light p-2">
-	<div class="container-fluid">
-		<a class="navbar-brand" href="/">GreaserAdmin</a>
-		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-			<span class="navbar-toggler-icon"></span>
+<div class="navbar bg-base-100 p-2">
+	<div class="flex-none">
+		<button class="btn btn-square btn-ghost">
+			<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path></svg>
 		</button>
-		<div class="collapse navbar-collapse" id="navbarSupportedContent">
-			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
-				{#if user}
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/admin/">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/admin/users">accounts</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/admin/roles">roles</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/admin/logout">logout</a>
-					</li>
-				{:else}
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/">Home</a>
-					</li>
-					<li class="nav-item">
-						<a class="nav-link active" aria-current="page" href="/admin/login">login</a>
-					</li>
-				{/if}
-			</ul>
-		</div>
 	</div>
-</nav>
+	<div class="flex-1">
+		<a class="btn btn-ghost normal-case text-xl" href="/">GreaserAdmin</a>
+	</div>
+	<div class="navbar-start">
+		{#if user}
+			<a class="link link-hover p-2" aria-current="page" href="/admin">Home</a>
+		{:else}
+			<a class="link link-hover p-2" aria-current="page" href="/">Home</a>
+		{/if}
+	</div>
+	<div class="navbar-center">
+		{#if user}
+			<a class="link link-hover p-2" aria-current="page" href="/admin/users">Users</a>
+			<a class="link link-hover p-2" aria-current="page" href="/admin/roles">Roles</a>
+			<a class="link link-hover p-2" aria-current="page" href="/admin/work-orders">Work Orders</a>
+			<a class="link link-hover p-2" aria-current="page" href="/admin/vehicles">Vehicles</a>
+			<a class="link link-hover p-2" aria-current="page" href="/admin/services">Services</a>
+		{/if}
+	</div>
+	<div class="navbar-end">
+		{#if user}
+			<a class="link link-hover " aria-current="page" href="/admin/logout">logout</a>
+		{:else}
+			<a class="link link-hover" aria-current="page" href="/admin/login">login</a>
+		{/if}
+	</div>
+</div>
+<div class="divider mt-0"></div>
+
 
 <slot />
 

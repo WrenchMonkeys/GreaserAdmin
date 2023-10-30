@@ -26,7 +26,6 @@
       </tr>
       </thead>
       <tbody>
-      <!-- row 1 -->
       {#await users}
         <p>...loading</p>
         {:then value}
@@ -34,9 +33,9 @@
             <tr>
               <th>{user.id}</th>
               <td>{user.email}</td>
-              <td>{!!user.emailVerified}</td>
+              <td>{user.emailVerified === 1}</td>
               <td>{user.phoneNumber}</td>
-              <td>{!!user.phoneNumberVerified}</td>
+              <td>{user.phoneNumberVerified === 1}</td>
               <td>{user.firstName}</td>
               <td>{user.lastName}</td>
               <td>{user.created_at}</td>

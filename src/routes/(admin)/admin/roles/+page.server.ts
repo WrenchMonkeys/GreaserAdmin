@@ -2,7 +2,7 @@ import type { PageServerLoad } from './$types';
 import { API_GATEWAY_URL } from '$env/static/private';
 
 export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
-	const usersResponse = await fetch(new URL('/api/authn/users', API_GATEWAY_URL), {
+	const rolesResponse = await fetch(new URL('/api/authn/roles', API_GATEWAY_URL), {
 		headers: new Headers({
 			Authorization: `Bearer ${locals.token}`,
 			Origin: getClientAddress(),
@@ -11,6 +11,6 @@ export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
 	});
 
 	return {
-		users: usersResponse.json()
+		roles: rolesResponse.json()
 	};
 };

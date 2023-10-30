@@ -33,11 +33,11 @@
             <tr>
               <th>{user.id}</th>
               <td>{user.email}</td>
-              <td>{user.emailVerified === 1}</td>
-              <td>{user.phoneNumber}</td>
-              <td>{user.phoneNumberVerified === 1}</td>
-              <td>{user.firstName}</td>
-              <td>{user.lastName}</td>
+              <td>{!!user.email_verified}</td>
+              <td>{user.phone_number}</td>
+              <td>{!!user.phone_verified}</td>
+              <td>{user.first_name}</td>
+              <td>{user.last_name}</td>
               <td>{user.created_at}</td>
               <td>{user.updated_at}</td>
             </tr>

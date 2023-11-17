@@ -40,7 +40,6 @@
 		{/if}
 	</div>
 </div>
-<div class="divider mt-0"></div>
 
 
 <slot />

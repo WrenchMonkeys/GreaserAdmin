@@ -26,9 +26,7 @@ const authenticationHandler: Handle = async ({ event, resolve }) => {
 		event.locals.token = token;
 	}
 
-	const response = await resolve(event);
-
-	return response;
+	return resolve(event);
 };
 
 const authorizationHandler: Handle = async ({ event, resolve }): Promise<Response> => {

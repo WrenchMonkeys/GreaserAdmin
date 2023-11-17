@@ -9,7 +9,18 @@ export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
 			'Content-Type': 'application/json'
 		})
 	});
+
+	const yearsRequest = await fetch(new URL('/api/vehicle/api/vehicle/year', API_GATEWAY_URL), {
+		headers: new Headers({
+			Authorization: `Bearer ${locals.token}`,
+			Origin: getClientAddress(),
+			'Content-Type': 'application/json'
+		})
+	});
 	return {
-		vehicles: vehiclesResponse.json()
+		streamed: {
+			vehicles: vehiclesResponse.json(),
+			years: yearsRequest.json()
+		}
 	};
 };

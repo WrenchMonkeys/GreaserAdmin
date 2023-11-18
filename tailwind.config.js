@@ -2,6 +2,14 @@ module.exports = {
 	content: ['./src/routes/**/*.{svelte,js,ts}'],
 	plugins: [require('daisyui')],
 	daisyui: {
-		themes: ['light', 'bumblebee', 'cupcake']
+		themes: [
+			{
+				nord: {
+					...require('daisyui/src/theming/themes')['nord'],
+					secondary: '#8894a2'
+				}
+			},
+			'dim'
+		]
 	}
 };

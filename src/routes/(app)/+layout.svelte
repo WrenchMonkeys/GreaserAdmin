@@ -1,17 +1,36 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light p-2">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="/">GreaserAdmin</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
-        </li>
-      </ul>
+<div class="container mx-auto">
+  <div class="navbar bg-base-100 p-2 mb-4">
+    <div class="">
+      <a class="btn btn-ghost w-full normal-case text-xl whitespace-nowrap" href="/">Mobile Greaser</a>
+    </div>
+    <div class="navbar-start">
+      <a class="link link-hover  p-2" aria-current="page" href="/">Home</a>
+    </div>
+    <div class="navbar-center">
+    </div>
+    <div class="navbar-end">
     </div>
   </div>
-</nav>
+</div>
+
 
 <slot/>
+
+<div class="container mx-auto">
+  <footer class="py-3 flex flex-col md:flex-row  md:justify-around">
+    <section class="p-2 flex flex-col lg:justify-between">
+      <h5 class="text-2xl font-bold tracking-tight mb-2">Mobile Greaser</h5>
+      <p class="text-secondary">Copyright © 2023 Mobile Greaser, Inc. All rights reserved</p>
+    </section>
+    <section class="p-2 d-flex flex-col md:justify-between">
+      <h5 class="font-bold mb-2">Company</h5>
+      <p><a class="link link-hover link-primary" href="https://twitter.com">Twitter</a></p>
+      <p><a class="link link-hover link-primary" href="mailto:team@mobilegreaser.com">team@mobilegreaser.com</a></p>
+    </section>
+    <section class="p-2 d-flex flex-column justify-content-lg-between">
+      <h5 class="font-bold mb-2">Legal</h5>
+      <p><a class="link link-hover link-primary" href="https://google.com">Terms of Service</a></p>
+      <p><a class="link link-hover link-primary" href="https://google.com">Privacy Policy</a></p>
+    </section>
+  </footer>
+</div>

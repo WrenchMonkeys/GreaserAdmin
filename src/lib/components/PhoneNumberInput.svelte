@@ -26,22 +26,12 @@
   $: handlePhoneNumberFormat(phoneNumber)
 </script>
 
-<div class="input input-bordered w-full flex flex-row justify-items-stretch">
-  <select name="countryCode" class="select select-ghost max-w-xs" bind:value={countryCode}>
+<div class="input input-bordered w-full flex flex-row justify-stretch">
+  <select name="countryCode" class="select-sm select-ghost max-w-xs" bind:value={countryCode}>
     {#each SUPPORTED_PHONE_COUNTRY_CODES as supportedCountryCode, i}
       <option value={supportedCountryCode.ext} selected={i === 0}>{supportedCountryCode.countryCode}</option>
     {/each}
   </select>
   <p class="font-weight-bold p-3">+{countryCode}</p>
-  <input type="tel" bind:value={phoneNumber} placeholder="555-555-5555" class="w-full max-w-xs" maxlength="14" minlength="0" pattern="\d{10}">
+  <input type="tel" bind:value={phoneNumber} placeholder="555-555-5555" class="w-full max-w-xs p-2" maxlength="14" minlength="0" pattern="\d{10}">
 </div>
-
-<style>
-  #country-code-select {
-      border-radius: 0.2rem;
-      box-shadow: none;
-      -webkit-box-shadow: none;
-      -moz-box-shadow: none;
-      border: none;
-  }
-</style>

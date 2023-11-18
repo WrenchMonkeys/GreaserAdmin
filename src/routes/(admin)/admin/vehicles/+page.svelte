@@ -1,5 +1,6 @@
 <script lang="ts">
   import { timeout } from "d3";
+  import { browser } from "$app/environment";
 
   export let data;
 
@@ -18,7 +19,9 @@
 
   $: vehicles = data.streamed?.vehicles ?? [];
 
-  $: getVehicles(page, size, year, make, model, trim);
+  $: if(browser) {
+    getVehicles(page, size, year, make, model, trim);
+  }
 
   $: if (year) {
     getMakes(year);

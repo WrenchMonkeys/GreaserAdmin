@@ -204,8 +204,8 @@
 				<button class="join-item btn">Page {page}</button>
 				<button
 					class="join-item btn"
-					disabled={size <= (await vehicles)?.length}
-					on:click={async () => (page = size <= (await vehicles)?.length ? page + 1 : page)}
+					disabled={value.length < size}
+					on:click={() => (page = size <= value.length ? page + 1 : page)}
 					>»</button
 				>
 			</div>

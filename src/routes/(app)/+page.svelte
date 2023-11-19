@@ -8,8 +8,8 @@
   <div class="flex flex-col items-center md:flex-row">
     <header class="p-3 flex flex-col w-full md:w-1/2">
       <h1 class="lg:text-4xl text-2xl font-bold tracking-tight text-center mb-3">On Demand Mobile Mechanics</h1>
-      <p class="text-secondary text-center">Mobile Greaser helps you service your vehicle any time, any location, at your convenience.</p>
-      <div class="my-auto flex flex-row justify-center align-middle items-center">
+      <p class="text-secondary text-center">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
+      <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
       </div>
@@ -74,8 +74,8 @@
 
   <div class="flex flex-col md:flex-row-reverse items-center">
     <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Get a complete service report</h2>
-      <p class="text-secondary text-center">With every service, we will include a free 50 point inspection report.</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Receive a comprehensive service overview</h2>
+      <p class="text-secondary text-center">With each service, enjoy a complimentary 50-point inspection report included at no extra cost</p>
     </div>
     <div class="p-3 flex align-middle items-center justify-center w-full md:w-1/2">
       <dotlottie-player src="https://lottie.host/e1eb53f3-f507-40b0-b5f0-00d6c13d3f22/XJAI2DpN49.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
@@ -86,8 +86,8 @@
 
   <div class="flex flex-col md:flex-row items-center">
     <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Drive with piece of mind</h2>
-      <p class="text-secondary text-center">With our 5000 mile warranty on all services we offer, you never have to worry about improper installation or faulty parts again</p>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Experience worry-free driving</h2>
+      <p class="text-secondary text-center">Rest easy with our 5000-mile warranty on all services, ensuring peace of mind against any concerns about improper installation or faulty parts.</p>
     </div>
     <div class="p-3 flex align-middle justify-center items-center w-full md:w-1/2">
       <dotlottie-player src="https://lottie.host/082f2a50-16c0-4549-a905-9154333fec51/0A79VM33Mw.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
@@ -98,9 +98,9 @@
 
   <div class="flex flex-col md:flex-row-reverse items-center">
     <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
-      <h2 class="sm:text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Simple and affordable Pricing</h2>
-      <p class="text-secondary text-center">With our flat rate pricing you never have to worry about being up-sold at the shop again.</p>
-      <div class="my-auto flex flex-row justify-center align-middle items-center sm:mt-4">
+      <h2 class="sm:text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Straightforward and budget-friendly rates</h2>
+      <p class="text-secondary text-center">Embrace transparent pricing with our flat-rate system, eliminating concerns about unexpected upsells at the shop</p>
+      <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
       </div>

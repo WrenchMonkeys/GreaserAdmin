@@ -98,7 +98,7 @@
 
   <div class="flex flex-col md:flex-row-reverse items-center">
     <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
-      <h2 class="sm:text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Straightforward and budget-friendly rates</h2>
+      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Straightforward and budget-friendly rates</h2>
       <p class="text-secondary text-center">Embrace transparent pricing with our flat-rate system, eliminating concerns about unexpected upsells at the shop</p>
       <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>

@@ -19,7 +19,7 @@
 
 <slot/>
 
-<div class="bg-base-200  border-t border-t-gray-300">
+<div class="bg-base-200  border-t border-t-gray-300 py-4">
   <div class="container mx-auto border">
     <footer class="py-3 flex flex-col md:flex-row  md:justify-around">
       <section class="p-2 flex flex-col lg:justify-between">

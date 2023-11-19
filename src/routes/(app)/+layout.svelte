@@ -1,6 +1,6 @@
-<div class="bg-base-200">
+<div class="bg-base-200 mb-4 border-b border-b-gray-300">
   <div class="container mx-auto ">
-    <nav class="navbar  p-2 mb-4">
+    <nav class="navbar  p-2">
       <div>
         <a class="btn btn-ghost w-full normal-case text-xl whitespace-nowrap" href="/">Mobile Greaser</a>
       </div>
@@ -19,11 +19,11 @@
 
 <slot/>
 
-<div class="bg-base-200">
+<div class="bg-base-200  border-t border-t-gray-300">
   <div class="container mx-auto border">
     <footer class="py-3 flex flex-col md:flex-row  md:justify-around">
       <section class="p-2 flex flex-col lg:justify-between">
-        <h5 class="md:text-2xl sm:text-xl font-bold tracking-tight mb-2">Mobile Greaser</h5>
+        <h5 class="md:text-2xl text-xl font-bold tracking-tight mb-2">Mobile Greaser</h5>
         <p class="text-secondary">Copyright © 2023 Mobile Greaser, Inc. All rights reserved</p>
       </section>
       <section class="p-2 d-flex flex-col md:justify-between">

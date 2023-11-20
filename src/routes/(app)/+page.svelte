@@ -5,17 +5,21 @@
 </script>
 
 <div class="container mx-auto">
-  <div class="flex flex-col items-center md:flex-row">
-    <header class="p-3 flex flex-col w-full md:w-1/2">
-      <h1 class="lg:text-4xl text-2xl font-bold tracking-tight text-center mb-3">On Demand Mobile Mechanics</h1>
-      <p class="text-secondary text-center">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
-      <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
-        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
-        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+  <div class="flex flex-col items-center md:flex-row ">
+    <div class="hero min-h-screen ">
+      <div class="hero-content text-center">
+        <div class="max-w-md">
+          <h1 class="text-3xl md:text-5xl font-bold">On Demand Mobile Mechanics</h1>
+          <p class="py-6 text-secondary">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
+            <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
+              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
+              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+            </div>
+        </div>
       </div>
-    </header>
+    </div>
     <div class="p-3 flex align-middle d-flex justify-center align-items-center w-full md:w-1/2">
-      <dotlottie-player src="https://lottie.host/2e1acaaf-5386-488f-8fe5-8e45aafa3c61/wug0qbTojd.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
+      <dotlottie-player src="https://lottie.host/2e1acaaf-5386-488f-8fe5-8e45aafa3c61/wug0qbTojd.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
     </div>
   </div>
 

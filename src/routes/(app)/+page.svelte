@@ -8,7 +8,7 @@
   <div class="flex flex-col items-center md:flex-row ">
     <div class="hero min-h-screen ">
       <div class="hero-content text-center">
-        <div class="max-w-md">
+        <div class="max-w-lg">
           <h1 class="text-3xl md:text-5xl font-bold">On Demand Mobile Mechanics</h1>
           <p class="py-6 text-secondary">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
             <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
@@ -28,7 +28,9 @@
   <div class="flex flex-col">
     <div class="p-3 flex flex-col justify-center items-center mb-4">
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Save time at the shop</h2>
-      <p class="text-secondary text-center">Join our clients to save time and money on your vehicle maintenance</p>
+      <div class="max-w-lg py-4 mx-auto">
+        <p class="text-secondary text-center">Join our clients to save time and money on your vehicle maintenance</p>
+      </div>
     </div>
     <div class="w-full h-60 carousel rounded-box items-center py-2">
       <div class="card card-bordered carousel-item bg-gray-100 shadow-xl max-w-2xl mr-3">
@@ -79,7 +81,9 @@
   <div class="flex flex-col md:flex-row-reverse items-center">
     <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Receive a comprehensive service overview</h2>
-      <p class="text-secondary text-center">With each service, enjoy a complimentary 50-point inspection report included at no extra cost</p>
+      <div class="max-w-lg py-4 mx-auto">
+        <p class="text-secondary text-center">With each service, enjoy a complimentary 50-point inspection report included at no extra cost</p>
+      </div>
     </div>
     <div class="p-3 flex align-middle items-center justify-center w-full md:w-1/2">
       <dotlottie-player src="https://lottie.host/e1eb53f3-f507-40b0-b5f0-00d6c13d3f22/XJAI2DpN49.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
@@ -89,9 +93,11 @@
   <div class="divider"></div>
 
   <div class="flex flex-col md:flex-row items-center">
-    <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
+    <div class="p-3 flex flex-col justify-center items-center w-full md:w-1/2">
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Experience worry-free driving</h2>
-      <p class="text-secondary text-center">Rest easy with our 5000-mile warranty on all services, ensuring peace of mind against any concerns about improper installation or faulty parts.</p>
+      <div class="max-w-lg py-4">
+        <p class="text-secondary text-center">Rest easy with our 5000-mile warranty on all services, ensuring peace of mind against any concerns about improper installation or faulty parts.</p>
+      </div>
     </div>
     <div class="p-3 flex align-middle justify-center items-center w-full md:w-1/2">
       <dotlottie-player src="https://lottie.host/082f2a50-16c0-4549-a905-9154333fec51/0A79VM33Mw.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player>
@@ -103,8 +109,10 @@
   <div class="flex flex-col md:flex-row-reverse items-center">
     <div class="p-3 flex flex-col justify-center w-full md:w-1/2">
       <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Straightforward and budget-friendly rates</h2>
-      <p class="text-secondary text-center">Embrace transparent pricing with our flat-rate system, eliminating concerns about unexpected upsells at the shop</p>
-      <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
+      <div class="max-w-lg py-4 mx-auto">
+        <p class="text-secondary text-center">Embrace transparent pricing with our flat-rate system, eliminating concerns about unexpected upsells at the shop</p>
+      </div>
+      <div class="flex flex-row justify-center align-middle items-center mt-4">
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
         <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
       </div>

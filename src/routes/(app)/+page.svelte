@@ -32,8 +32,8 @@
         <p class="text-secondary text-center">Join our clients to save time and money on your vehicle maintenance</p>
       </div>
     </div>
-    <div class="w-full h-60 carousel rounded-box items-center py-2">
-      <div class="card card-bordered carousel-item bg-gray-100 shadow-xl max-w-2xl mr-3">
+    <div class="w-full carousel rounded-box items-center py-2">
+      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
         <div class="card-body">
           <h3 class="card-title text-xl text-center">
             Lorem Ipsum
@@ -43,7 +43,7 @@
           </p>
         </div>
       </div>
-      <div class="card card-bordered carousel-item bg-gray-100 shadow-xl max-w-2xl mr-3">
+      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
         <div class="card-body">
           <h3 class="card-title text-xl text-center">
             Lorem Ipsum
@@ -53,7 +53,7 @@
           </p>
         </div>
       </div>
-      <div class="card card-bordered carousel-item bg-gray-100 shadow-xl max-w-2xl mr-3">
+      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
         <div class="card-body">
           <h3 class="card-title text-xl text-center">
             Lorem Ipsum
@@ -63,7 +63,7 @@
           </p>
         </div>
       </div>
-      <div class="card card-bordered carousel-item bg-gray-100 shadow-xl max-w-2xl mr-3">
+      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
         <div class="card-body">
           <h3 class="card-title text-xl text-center">
             Lorem Ipsum

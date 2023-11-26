@@ -2,13 +2,14 @@ import { sequence } from '@sveltejs/kit/hooks';
 import type { Handle } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
 import { API_GATEWAY_URL } from '$env/static/private';
+import { unwrapNullable } from '$lib/utils';
 
 // we do want to ensure that the user token is valid on every protected route
 // call /api/authn/ to get the user from api and add to locals, do not store.
 const authenticationHandler: Handle = async ({ event, resolve }) => {
+	event.locals.userAgent = unwrapNullable(event.request.headers.get('user-agent'));
 	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
 		const token = event.cookies.get('token');
-		console.log({ token });
 		const userResponse = await fetch(new URL('/api/authn/', API_GATEWAY_URL), {
 			headers: new Headers({
 				Authorization: `Bearer ${token}`
@@ -20,9 +21,7 @@ const authenticationHandler: Handle = async ({ event, resolve }) => {
 			throw redirect(302, '/admin/login');
 		}
 
-		const user = await userResponse.json();
-		console.log(user);
-		event.locals.user = user;
+		event.locals.user = await userResponse.json();
 		event.locals.token = token;
 	}
 
@@ -34,14 +33,11 @@ const authorizationHandler: Handle = async ({ event, resolve }): Promise<Respons
 		event.url.pathname.includes('admin/submitOTP') &&
 		!event.url.searchParams.get('phoneNumber')
 	) {
-		console.log(`Phone number was not provided ${event.url.pathname}`);
-
 		throw redirect(302, '/admin/login');
 	}
 
 	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
 		if (event.locals.token == null) {
-			console.log(`user is not authorized to access ${event.url.pathname}`);
 			throw redirect(302, '/admin/login');
 		}
 	}

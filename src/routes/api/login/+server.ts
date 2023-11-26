@@ -22,7 +22,7 @@ export const POST: RequestHandler = async ({ request, url, locals }) => {
 		}
 	}
 
-	const resp = await initiatePasswordlessLogin(phoneNumber);
+	const resp = await initiatePasswordlessLogin(phoneNumber, locals.userAgent);
 
 	if (!resp.ok) {
 		throw error(resp?.status, resp.statusText);
@@ -37,9 +37,7 @@ export const POST: RequestHandler = async ({ request, url, locals }) => {
 const getUsernameAvailability = async (phoneNumber: string) =>
 	fetch(new URL(`/accounts/available?username=${phoneNumber}`, AUTH_URL), {
 		headers: {
-			Origin: 'http://localhost',
-			'User-Agent':
-				'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0'
+			Origin: 'http://localhost'
 		}
 	});
 
@@ -52,17 +50,14 @@ const registerAccount = (phoneNumber: string, password: string) =>
 		}),
 		headers: {
 			'Content-Type': 'application/json',
-			Origin: 'http://localhost',
-			'User-Agent':
-				'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0'
+			Origin: 'http://localhost'
 		}
 	});
 
-const initiatePasswordlessLogin = (phoneNumber: string) =>
+const initiatePasswordlessLogin = (phoneNumber: string, userAgent: string) =>
 	fetch(new URL(`/session/token?username=${phoneNumber}`, AUTH_URL), {
 		headers: {
 			Origin: 'http://localhost',
-			'User-Agent':
-				'Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/119.0'
+			'User-Agent': userAgent
 		}
 	});

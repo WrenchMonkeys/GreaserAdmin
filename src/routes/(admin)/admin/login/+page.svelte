@@ -29,7 +29,7 @@
     }
   }
 
-  $: disabled = phoneNumber?.length !== 14;
+  $: disabled = phoneNumber?.length !== 14 && errorMessage === '';
 
 </script>
 

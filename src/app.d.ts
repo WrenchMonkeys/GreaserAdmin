@@ -8,6 +8,7 @@ declare global {
 		interface Locals {
 			token?: string;
 			user?: User;
+			userAgent: string;
 		}
 		// interface PageData {}
 		// interface Platform {}

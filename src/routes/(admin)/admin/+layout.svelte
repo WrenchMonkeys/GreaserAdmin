@@ -4,7 +4,7 @@
 
 	export let data: PageData;
 
-	let user: User | undefined = data?.user;
+	$: user = data?.user;
 
 </script>
 <div class="navbar bg-base-100 p-2">

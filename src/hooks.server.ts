@@ -6,7 +6,7 @@ import { API_GATEWAY_URL } from '$env/static/private';
 // we do want to ensure that the user token is valid on every protected route
 // call /api/authn/ to get the user from api and add to locals, do not store.
 const authenticationHandler: Handle = async ({ event, resolve }) => {
-	if (/\/admin(?:\/(?!login|submitOTP)\w+)?$/gm.test(event.url.pathname)) {
+	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
 		const token = event.cookies.get('token');
 		console.log({ token });
 		const userResponse = await fetch(new URL('/api/authn/', API_GATEWAY_URL), {

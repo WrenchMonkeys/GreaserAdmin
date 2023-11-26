@@ -27,5 +27,7 @@ export const POST: RequestHandler = async ({ request, fetch, cookies, locals }) 
 		path: '/'
 	});
 
-	throw redirect(302, '/admin');
+	// throw redirect(302, '/admin');
+
+	return json({ token, user }, { status: 200 });
 };

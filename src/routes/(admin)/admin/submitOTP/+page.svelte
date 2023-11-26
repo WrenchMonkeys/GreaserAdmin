@@ -18,7 +18,7 @@
     });
 
     if (submitOTPResponse.ok) {
-      await goto('/admin/')
+      await goto('/admin')
     } else {
       const data = await submitOTPResponse.json();
       errorMessage = data?.message;

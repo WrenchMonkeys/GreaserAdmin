@@ -206,8 +206,7 @@
 					class="join-item btn"
 					disabled={value.length < size}
 					on:click={() => (page = size <= value.length ? page + 1 : page)}
-					>»</button
-				>
+					>»</button>
 			</div>
 		{:catch error}
 			<p>{error.message}</p>

@@ -39,7 +39,7 @@ const authorizationHandler: Handle = async ({ event, resolve }): Promise<Respons
 		throw redirect(302, '/admin/login');
 	}
 
-	if (/\/admin(?:\/(?!login|submitOTP)\w+)?$/gm.test(event.url.pathname)) {
+	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
 		if (event.locals.token == null) {
 			console.log(`user is not authorized to access ${event.url.pathname}`);
 			throw redirect(302, '/admin/login');

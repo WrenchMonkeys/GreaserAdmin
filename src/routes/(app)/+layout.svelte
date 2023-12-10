@@ -33,8 +33,8 @@
       </section>
       <section class="p-2 d-flex flex-column justify-content-lg-between">
         <h5 class="font-bold mb-2">Legal</h5>
-        <p><a class="link link-hover link-primary" href="https://google.com">Terms of Service</a></p>
-        <p><a class="link link-hover link-primary" href="https://google.com">Privacy Policy</a></p>
+        <p><a class="link link-hover link-primary" href="/legal/terms">Terms of Service</a></p>
+        <p><a class="link link-hover link-primary" href="/legal/privacy">Privacy Policy</a></p>
       </section>
     </footer>
   </div>

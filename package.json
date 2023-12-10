@@ -54,6 +54,7 @@
     "modern-normalize": "^2.0.0",
     "postcss": "^8.4.31",
     "posthog-js": "^1.94.1",
+    "svelte-preprocess": "^5.1.1",
     "tailwindcss": "^3.3.4"
   }
 }

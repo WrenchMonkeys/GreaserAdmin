@@ -2,7 +2,7 @@
 
 </script>
 
-<main class="container mx-auto my-6">
+<main class="container mx-auto my-6 px-4">
   <div class="hero">
     <div class="hero-content text-center">
       <div class="max-w-lg">

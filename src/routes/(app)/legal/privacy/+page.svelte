@@ -14,10 +14,10 @@
 
   <h2 class="text-xl md:text-2xl font-bold my-3">Introduction</h2>
 
-  <p class="py-2">Welcome to Mobile Greaser, Inc.</p>
+  <p class="py-2">Welcome to Mobile Greaser Technologies, Inc.</p>
 
   <p class="py-2">
-    Mobile Greaser, Inc. (“us”, “we”, or “our”) operates Mobile Greaser mobile application (hereinafter
+    Mobile Greaser Technologies, Inc. (“us”, “we”, or “our”) operates Mobile Greaser mobile application (hereinafter
     referred to as “Service”).
   </p>
 
@@ -39,7 +39,7 @@
 
   <h2 class="text-xl md:text-2xl font-bold my-3">Definitions</h2>
 
-  <p class="py-2">SERVICE means the Mobile Greaser mobile application operated by Mobile Greaser, Inc.</p>
+  <p class="py-2">SERVICE means the Mobile Greaser mobile application operated by Mobile Greaser Technologies, Inc.</p>
 
   <p class="py-2">
     PERSONAL DATA means data about a living individual who can be identified from those data (or from
@@ -170,7 +170,7 @@
 
   <h2 class="text-xl md:text-2xl font-bold my-3">Use of Data</h2>
 
-  <p class="py-2">Mobile Greaser, Inc. uses the collected data for various purposes:</p>
+  <p class="py-2">Mobile Greaser Technologies, Inc. uses the collected data for various purposes:</p>
   <ul class="list-inside pl-4">
     <li class="list-disc">to provide and maintain our Service;</li>
     <li class="list-disc">to notify you about changes to our Service;</li>
@@ -221,7 +221,7 @@
   </p>
 
   <p class="py-2">
-    Mobile Greaser, Inc. will take all the steps reasonably necessary to ensure that your data is treated
+    Mobile Greaser Technologies, Inc. will take all the steps reasonably necessary to ensure that your data is treated
     securely and in accordance with this Privacy Policy and no transfer of your Personal Data will take place to an
     organisation or a country unless there are adequate controls in place including the security of your data and other
     personal information.

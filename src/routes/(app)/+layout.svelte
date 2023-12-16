@@ -24,7 +24,7 @@
     <footer class="py-3 flex flex-col md:flex-row  md:justify-around">
       <section class="p-2 flex flex-col lg:justify-between">
         <h5 class="md:text-2xl text-xl font-bold tracking-tight mb-2">Mobile Greaser</h5>
-        <p class="text-secondary">Copyright © 2023 Mobile Greaser, Inc. All rights reserved</p>
+        <p class="text-secondary">Copyright © 2023 Mobile Greaser Technologies, Inc. All rights reserved</p>
       </section>
       <section class="p-2 d-flex flex-col md:justify-between">
         <h5 class="font-bold mb-2">Company</h5>

@@ -17,12 +17,12 @@
   <p class="py-2">Welcome to Mobile Greaser Technologies, Inc.</p>
 
   <p class="py-2">
-    Mobile Greaser Technologies, Inc. (“us”, “we”, or “our”) operates Mobile Greaser mobile application (hereinafter
+    Mobile Greaser Technologies, Inc. (“us”, “we”, or “our”) operates Greaser mobile application (hereinafter
     referred to as “Service”).
   </p>
 
   <p class="py-2">
-    Our Privacy Policy governs your visit to Mobile Greaser mobile application, and explains how we
+    Our Privacy Policy governs your visit to Greaser mobile application, and explains how we
     collect, safeguard and disclose information that results from your use of our Service.
   </p>
 
@@ -39,7 +39,7 @@
 
   <h2 class="text-xl md:text-2xl font-bold my-3">Definitions</h2>
 
-  <p class="py-2">SERVICE means the Mobile Greaser mobile application operated by Mobile Greaser Technologies, Inc.</p>
+  <p class="py-2">SERVICE means the Greaser mobile application operated by Mobile Greaser Technologies, Inc.</p>
 
   <p class="py-2">
     PERSONAL DATA means data about a living individual who can be identified from those data (or from

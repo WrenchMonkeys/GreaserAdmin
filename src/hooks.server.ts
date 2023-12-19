@@ -29,13 +29,6 @@ const authenticationHandler: Handle = async ({ event, resolve }) => {
 };
 
 const authorizationHandler: Handle = async ({ event, resolve }): Promise<Response> => {
-	if (
-		event.url.pathname.includes('admin/submitOTP') &&
-		!event.url.searchParams.get('phoneNumber')
-	) {
-		throw redirect(302, '/admin/login');
-	}
-
 	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
 		if (event.locals.token == null) {
 			throw redirect(302, '/admin/login');

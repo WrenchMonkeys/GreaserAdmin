@@ -1,26 +1,11 @@
 import type { RequestHandler } from './$types';
-import { getRandomValues } from 'crypto';
 import { error, json, redirect } from '@sveltejs/kit';
 
 import { AUTH_URL } from '$env/static/private';
 import type { LoginPayload } from '$lib/models/login/loginPayload';
-import { unwrapNullable } from '$lib/utils';
-import { goto } from '$app/navigation';
 
 export const POST: RequestHandler = async ({ request, url, locals }) => {
 	const { phoneNumber, rememberMe }: LoginPayload = await request.json();
-
-	const usernameAvailabilityResp = await getUsernameAvailability(phoneNumber);
-
-	if (usernameAvailabilityResp.ok) {
-		const password = getRandomValues(new Uint32Array(10)).join('');
-		const registerResponse = await registerAccount(phoneNumber, password);
-
-		if (!registerResponse.ok) {
-			const registerError = await registerResponse.json();
-			throw error(500, registerError.error);
-		}
-	}
 
 	const resp = await initiatePasswordlessLogin(phoneNumber, locals.userAgent);
 
@@ -55,7 +40,7 @@ const registerAccount = (phoneNumber: string, password: string) =>
 	});
 
 const initiatePasswordlessLogin = (phoneNumber: string, userAgent: string) =>
-	fetch(new URL(`/session/token?username=${phoneNumber}`, AUTH_URL), {
+	fetch(new URL(`/session/token?username=${encodeURIComponent(phoneNumber)}`, AUTH_URL), {
 		headers: {
 			Origin: 'http://localhost',
 			'User-Agent': userAgent

@@ -1,28 +1,26 @@
 <script lang="ts">
-  import { page } from '$app/stores'
   import { goto } from "$app/navigation";
+  import { loginStore } from "$lib/stores/loginStore";
 
   let errorMessage = '';
   let otpCode = '';
   let disabled: boolean = true;
-  export let data;
-  const phoneNumber = $page.url.searchParams.get('phoneNumber');
 
   const handleSubmitOTP = async () => {
-    const submitOTPResponse = await fetch('/api/submitOTP', {
-      method: 'POST',
-      body: JSON.stringify({
-        phoneNumber,
-        code: otpCode
-      }),
-    });
+      const submitOTPResponse = await fetch('/api/submitOTP', {
+        method: 'POST',
+        body: JSON.stringify({
+          phoneNumber: $loginStore.phoneNumber,
+          code: otpCode
+        }),
+      });
 
-    if (submitOTPResponse.ok) {
-      await goto('/admin')
-    } else {
-      const data = await submitOTPResponse.json();
-      errorMessage = data?.message;
-    }
+      if (submitOTPResponse.ok) {
+        await goto('/admin')
+      } else {
+        const data = await submitOTPResponse.json();
+        errorMessage = data?.message;
+      }
   };
 
   $: disabled = otpCode?.length !== 6;
@@ -34,7 +32,7 @@
     <div class="card-body">
       <header class="mb-3">
         <h4 class="card-title text-center mb-2">Submit OTP Code</h4>
-        <p class="text-secondary ">An code has been sent to {phoneNumber} submit it below.</p>
+        <p class="text-secondary ">An code has been sent to {$loginStore.phoneNumber} submit it below.</p>
       </header>
       <input class="input input-bordered w-full max-w-xs mx-auto" type="text" bind:value={otpCode} placeholder="input your OTP code here" maxlength="6">
       <div class="p-2 mb-2">

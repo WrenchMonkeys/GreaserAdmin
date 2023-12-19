@@ -1,6 +1,5 @@
 <script lang="ts">
-  import { error } from "@sveltejs/kit";
-  import type { EventHandler } from "svelte/elements";
+  import { loginStore } from "$lib/stores/loginStore";
   import PhoneNumberInput from "$lib/components/PhoneNumberInput.svelte";
   import { goto } from "$app/navigation";
 
@@ -14,7 +13,7 @@
     const submitPhoneNumberResponse = await fetch('/api/login', {
       method: 'POST',
       body: JSON.stringify({
-        phoneNumber: phoneNumber.replace(/\D+/g, ''),
+        phoneNumber: `+${countryCode}${phoneNumber.replace(/\D+/g, '')}`,
         rememberMe,
       }),
       headers: {
@@ -23,7 +22,8 @@
     })
 
     if (submitPhoneNumberResponse.ok) {
-      await goto(`/admin/submitOTP?phoneNumber=${phoneNumber.replace(/\D+/g, '')}`);
+      $loginStore.phoneNumber = `+${countryCode}${phoneNumber.replace(/\D+/g, '')}`;
+      await goto('/admin/submitOTP');
     } else {
       errorMessage = submitPhoneNumberResponse.statusText;
     }

@@ -23,57 +23,63 @@
     </div>
   </div>
 
+<!--  <div class="divider"></div>-->
+
+<!--  <div class="flex flex-col">-->
+<!--    <div class="p-3 flex flex-col justify-center items-center mb-4">-->
+<!--      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Save time at the shop</h2>-->
+<!--      <div class="max-w-lg py-4 mx-auto">-->
+<!--        <p class="text-secondary text-center">Join our clients to save time and money on your vehicle maintenance</p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    <div class="w-full carousel rounded-box items-center py-2">-->
+<!--      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">-->
+<!--        <div class="card-body">-->
+<!--          <h3 class="card-title text-xl text-center">-->
+<!--            Lorem Ipsum-->
+<!--          </h3>-->
+<!--          <p class="overflow-ellipsis">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">-->
+<!--        <div class="card-body">-->
+<!--          <h3 class="card-title text-xl text-center">-->
+<!--            Lorem Ipsum-->
+<!--          </h3>-->
+<!--          <p class="overflow-ellipsis">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">-->
+<!--        <div class="card-body">-->
+<!--          <h3 class="card-title text-xl text-center">-->
+<!--            Lorem Ipsum-->
+<!--          </h3>-->
+<!--          <p class="overflow-ellipsis">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">-->
+<!--        <div class="card-body">-->
+<!--          <h3 class="card-title text-xl text-center">-->
+<!--            Lorem Ipsum-->
+<!--          </h3>-->
+<!--          <p class="overflow-ellipsis">-->
+<!--            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
   <div class="divider"></div>
 
   <div class="flex flex-col">
-    <div class="p-3 flex flex-col justify-center items-center mb-4">
-      <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-3">Save time at the shop</h2>
-      <div class="max-w-lg py-4 mx-auto">
-        <p class="text-secondary text-center">Join our clients to save time and money on your vehicle maintenance</p>
-      </div>
-    </div>
-    <div class="w-full carousel rounded-box items-center py-2">
-      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
-        <div class="card-body">
-          <h3 class="card-title text-xl text-center">
-            Lorem Ipsum
-          </h3>
-          <p class="overflow-ellipsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
-        <div class="card-body">
-          <h3 class="card-title text-xl text-center">
-            Lorem Ipsum
-          </h3>
-          <p class="overflow-ellipsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
-        <div class="card-body">
-          <h3 class="card-title text-xl text-center">
-            Lorem Ipsum
-          </h3>
-          <p class="overflow-ellipsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-      <div class="card card-bordered carousel-item bg-gray-100 shadow max-w-2xl mr-3">
-        <div class="card-body">
-          <h3 class="card-title text-xl text-center">
-            Lorem Ipsum
-          </h3>
-          <p class="overflow-ellipsis">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </p>
-        </div>
-      </div>
-    </div>
+    <iframe src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600"/>
   </div>
 
   <div class="divider"></div>

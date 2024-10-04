@@ -3,36 +3,30 @@ import type { Handle } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
 import { API_GATEWAY_URL } from '$env/static/private';
 import { unwrapNullable } from '$lib/utils';
+import { createClient } from '@supabase/supabase-js';
+import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY } from '$env/static/public';
+const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
 
 // we do want to ensure that the user token is valid on every protected route
 // call /api/authn/ to get the user from api and add to locals, do not store.
-const authenticationHandler: Handle = async ({ event, resolve }) => {
-	event.locals.userAgent = unwrapNullable(event.request.headers.get('user-agent'));
-	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
-		const token = event.cookies.get('token');
-		const userResponse = await fetch(new URL('/api/authn/', API_GATEWAY_URL), {
-			headers: new Headers({
-				Authorization: `Bearer ${token}`
-			})
-		});
-
-		if (!userResponse.ok) {
-			console.log(`user is not authorized to access ${event.url.pathname}`);
-			throw redirect(302, '/admin/login');
-		}
-
-		event.locals.user = await userResponse.json();
-		event.locals.token = token;
-	}
-
-	return resolve(event);
-};
 
 const authorizationHandler: Handle = async ({ event, resolve }): Promise<Response> => {
+	const token = event.cookies.get('token');
 	if (/\/admin(?:\/(?!login|submitOTP)[\w-]+)?$/gm.test(event.url.pathname)) {
-		if (event.locals.token == null) {
+		if (token == null) {
 			throw redirect(302, '/admin/login');
 		}
+
+		const {
+			data: { user }
+		} = await supabase.auth.getUser(token);
+
+		if (user == null) {
+			throw redirect(302, '/admin/login');
+		}
+
+		event.locals.user = user;
+		event.locals.token = token;
 	}
 
 	const response = await resolve(event);
@@ -40,4 +34,4 @@ const authorizationHandler: Handle = async ({ event, resolve }): Promise<Respons
 	return response;
 };
 
-export const handle: Handle = sequence(authenticationHandler, authorizationHandler);
+export const handle: Handle = sequence(authorizationHandler);

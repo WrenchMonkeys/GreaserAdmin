@@ -1,4 +1,6 @@
-import { writable } from "svelte/store";
+import { writable } from 'svelte/store';
 
-
-export const loginStore = writable({});
+export const loginStore = writable({
+	phoneNumber: '',
+	rememberMe: false
+});

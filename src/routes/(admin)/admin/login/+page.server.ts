@@ -1,19 +1,11 @@
 import type { PageServerLoad } from './$types';
 import { API_GATEWAY_URL } from '$env/static/private';
-import { error, json } from '@sveltejs/kit';
+import { createClient } from '@supabase/supabase-js';
 
 export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
-	const statusResponse = await fetch(new URL('/', API_GATEWAY_URL), {
-		headers: new Headers({
-			Origin: getClientAddress(),
-			'Content-Type': 'application/json',
-			'User-Agent': locals.userAgent
-		})
-	});
-
-	if (!statusResponse.ok) {
-		throw error(statusResponse.status ?? 500, statusResponse.statusText);
+	try {
+		return {};
+	} catch (error) {
+		return { error: 'Failed to connect to the authentication server.' };
 	}
-
-	return {};
 };

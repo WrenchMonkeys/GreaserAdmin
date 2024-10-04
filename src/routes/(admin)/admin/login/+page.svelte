@@ -2,34 +2,32 @@
   import { loginStore } from "$lib/stores/loginStore";
   import PhoneNumberInput from "$lib/components/PhoneNumberInput.svelte";
   import { goto } from "$app/navigation";
+  import { page } from '$app/stores';
+  import { createClient } from '@supabase/supabase-js';
+  import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY } from '$env/static/public';
 
   let countryCode = '1'
   let phoneNumber = '';
-  let errorMessage = '';
+  $: errorMessage = $page.data.error;
   let rememberMe = false;
   let disabled = true;
 
   const handleLogin = async () => {
-    const submitPhoneNumberResponse = await fetch('/api/login', {
-      method: 'POST',
-      body: JSON.stringify({
-        phoneNumber: `+${countryCode}${phoneNumber.replace(/\D+/g, '')}`,
-        rememberMe,
-      }),
-      headers: {
-        'Accept': 'application/json'
-      }
+    const { data, error } = await supabase.auth.signInWithOtp({
+      phone: `+${countryCode}${phoneNumber.replace(/\D+/g, '')}`
     })
 
-    if (submitPhoneNumberResponse.ok) {
+    if (error) {
+      errorMessage = error.message;
+    } else {
       $loginStore.phoneNumber = `+${countryCode}${phoneNumber.replace(/\D+/g, '')}`;
       await goto('/admin/submitOTP');
-    } else {
-      errorMessage = submitPhoneNumberResponse.statusText;
     }
   }
 
   $: disabled = phoneNumber?.length !== 14 && errorMessage === '';
+
+  const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
 
 </script>
 

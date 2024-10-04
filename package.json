@@ -49,6 +49,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@supabase/supabase-js": "^2.45.4",
     "d3": "^7.8.5",
     "daisyui": "^4.4.2",
     "modern-normalize": "^2.0.0",

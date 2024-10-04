@@ -1,6 +1,7 @@
 // See https://kit.svelte.dev/docs/types#app
 // for information about these interfaces
-import type User from '$lib/models/user';
+
+import type { User } from '@supabase/supabase-js';
 
 declare global {
 	namespace App {

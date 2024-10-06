@@ -30,6 +30,7 @@
 			<a class="link link-hover p-2" aria-current="page" href="/admin/work-orders">Work Orders</a>
 			<a class="link link-hover p-2" aria-current="page" href="/admin/vehicles">Vehicles</a>
 			<a class="link link-hover p-2" aria-current="page" href="/admin/services">Services</a>
+			<a class="link link-hover p-2" aria-current="page" href="/admin/applications">Applications</a>
 		{/if}
 	</div>
 	<div class="navbar-end">

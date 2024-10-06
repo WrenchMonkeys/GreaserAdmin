@@ -1,34 +1,20 @@
 <script lang="ts">
-  import { goto } from '$app/navigation';
-  import { createClient } from '@supabase/supabase-js';
-  import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY } from '$env/static/public';
-
-  const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
-
-  let errorMessage = '';
-  let successMessage = '';
-
   const handleDeleteAccount = async () => {
-    const { error } = await supabase.auth.api.deleteUser(supabase.auth.user().id);
-
-    if (error) {
-      errorMessage = error.message;
-    } else {
-      successMessage = 'Your account deletion request has been submitted. Your data will be retained for 30 days before permanent deletion.';
-      await goto('/');
-    }
+    window.location = 'https://mobilegreaser.com/profile'
   }
 </script>
 
 <div class="container mx-auto p-4 flex-grow">
-  <header class="mb-4">
+  <header class="mb-4 text-center">
     <h1 class="text-4xl font-bold">Delete Your Account</h1>
   </header>
 
   <section class="mb-4">
     <h2 class="text-2xl font-semibold">Steps to Request Account Deletion</h2>
     <ol class="list-decimal list-inside">
-      <li>Click the "Request Account Deletion" button below.</li>
+      <li>Click the "Request Account Deletion" button below, you will be redirected to the MobileGreaser mobile app.</li>
+      <li>Navigate to the profile page on the MobileGreaser mobile app</li>
+      <li>Scroll to the bottom of the view and Click "Delete Account"</li>
       <li>Confirm your request in the confirmation dialog.</li>
       <li>Your account will be marked for deletion and you will be logged out.</li>
       <li>Your data will be retained for 30 days before permanent deletion.</li>
@@ -51,15 +37,7 @@
     <p>After 30 days, all retained data will be permanently deleted.</p>
   </section>
 
-  {#if errorMessage}
-    <p class="text-red-500">{errorMessage}</p>
-  {/if}
-
-  {#if successMessage}
-    <p class="text-green-500">{successMessage}</p>
-  {/if}
-
-  <button class="btn btn-danger" on:click={handleDeleteAccount}>Request Account Deletion</button>
+  <button class="btn btn-danger mx-auto" on:click={handleDeleteAccount}>Request Account Deletion</button>
 </div>
 
 <style>

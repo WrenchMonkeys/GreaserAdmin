@@ -36,6 +36,10 @@
           <p><a class="link link-hover link-primary" href="/legal/terms">Terms of Service</a></p>
           <p><a class="link link-hover link-primary" href="/legal/privacy">Privacy Policy</a></p>
         </section>
+        <section class="p-2 d-flex flex-column justify-content-lg-between">
+          <h5 class="font-bold mb-2">Help</h5>
+          <p><a class="link link-hover link-primary" href="/help/delete-account">Delete Account</a></p>
+        </section>
       </footer>
     </div>
   </div>

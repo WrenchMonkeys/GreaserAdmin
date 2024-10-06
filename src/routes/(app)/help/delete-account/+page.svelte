@@ -12,7 +12,7 @@
   <section class="mb-4">
     <h2 class="text-2xl font-semibold">Steps to Request Account Deletion</h2>
     <ol class="list-decimal list-inside">
-      <li>Click the "Request Account Deletion" button below, you will be redirected to the MobileGreaser mobile app.</li>
+      <li>Click the "Request Account Deletion" button below from your phone, you will be redirected to the MobileGreaser mobile app.</li>
       <li>Navigate to the profile page on the MobileGreaser mobile app</li>
       <li>Scroll to the bottom of the view and Click "Delete Account"</li>
       <li>Confirm your request in the confirmation dialog.</li>

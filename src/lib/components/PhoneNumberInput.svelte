@@ -26,8 +26,8 @@
   $: handlePhoneNumberFormat(phoneNumber)
 </script>
 
-<div class="input input-bordered w-full flex flex-row justify-stretch">
-  <select name="countryCode" class="select-sm select-ghost max-w-xs" bind:value={countryCode}>
+<div class="input bg-white input-bordered w-full flex flex-row justify-stretch outline-none">
+  <select name="countryCode" class="select-sm select-ghost max-w-xs bg-white" bind:value={countryCode}>
     {#each SUPPORTED_PHONE_COUNTRY_CODES as supportedCountryCode, i}
       <option value={supportedCountryCode.ext} selected={i === 0}>{supportedCountryCode.countryCode}</option>
     {/each}

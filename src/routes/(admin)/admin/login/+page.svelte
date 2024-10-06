@@ -42,7 +42,7 @@
         <p class="text-secondary text-center">We'll send you a code to verify</p>
       </header>
 
-      <form action="" class="w-3/4 mx-auto p-3">
+      <form action="" class="w-3/4 mx-auto p-3 max-w-xl">
         <div class="p-2 mb-3">
           <PhoneNumberInput bind:countryCode bind:phoneNumber/>
           {#if errorMessage}

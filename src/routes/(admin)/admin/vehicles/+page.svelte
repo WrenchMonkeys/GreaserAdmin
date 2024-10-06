@@ -121,7 +121,7 @@
 				{#await data.streamed?.years}
 					<option disabled selected value="">...loading</option>
 				{:then years}
-					<option disabled selected value="">Select Year</option>
+					<option disabled selected value={null}>Select Year</option>
 					{#each years as year}
 						<option value={year.value}>{year.value}</option>
 					{/each}
@@ -132,7 +132,7 @@
 				bind:value={make}
 				disabled={year == null}
 			>
-				<option disabled selected>Select Make</option>
+				<option disabled selected value={null}>Select Make</option>
 				{#if makes}
 					{#each makes as make}
 						<option value={make.name}>{make.name}</option>
@@ -144,7 +144,7 @@
 				bind:value={model}
 				disabled={make == null}
 			>
-				<option disabled selected>Select Model</option>
+				<option disabled selected value={null}>Select Model</option>
 				{#if models}
 					{#each models as model}
 						<option value={model.name}>{model.name}</option>

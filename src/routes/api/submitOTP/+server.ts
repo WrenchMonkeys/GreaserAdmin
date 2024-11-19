@@ -1,17 +1,20 @@
 import type { RequestHandler } from './$types';
-import { API_GATEWAY_URL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { error, json, redirect } from '@sveltejs/kit';
 
 export const POST: RequestHandler = async ({ request, fetch, cookies, locals }) => {
 	const data = await request.json();
 
-	const submitOTPResponse = await fetch(new URL('/api/authn/submit-otp-code', API_GATEWAY_URL), {
-		method: 'POST',
-		headers: {
-			'Content-Type': 'application/json'
-		},
-		body: JSON.stringify(data)
-	});
+	const submitOTPResponse = await fetch(
+		new URL('/api/authn/submit-otp-code', env.API_GATEWAY_URL),
+		{
+			method: 'POST',
+			headers: {
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify(data)
+		}
+	);
 
 	const responseBody = await submitOTPResponse.json();
 

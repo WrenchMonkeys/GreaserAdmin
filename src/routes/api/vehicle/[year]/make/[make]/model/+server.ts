@@ -1,5 +1,5 @@
 import type { RequestHandler } from './$types.js';
-import { API_GATEWAY_URL } from '$env/static/private';
+import { env } from '$env/dynamic/private';
 import { error, json } from '@sveltejs/kit';
 
 export const GET: RequestHandler = async ({ fetch, url, cookies, params }) => {
@@ -7,7 +7,7 @@ export const GET: RequestHandler = async ({ fetch, url, cookies, params }) => {
 		const result = await fetch(
 			new URL(
 				`/api/vehicle/api/vehicle/year/${params.year}/make/${params.make}/model/`,
-				API_GATEWAY_URL
+				env.API_GATEWAY_URL
 			),
 			{
 				method: 'GET',

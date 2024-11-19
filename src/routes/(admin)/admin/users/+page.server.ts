@@ -5,7 +5,7 @@ export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
 	const usersResponse = await fetch(new URL('/api/authn/users', API_GATEWAY_URL), {
 		headers: new Headers({
 			Authorization: `Bearer ${locals.token}`,
-			Origin: getClientAddress(),
+			Origin: getClientAddress ? getClientAddress() : 'http://localhost',
 			'Content-Type': 'application/json'
 		})
 	});

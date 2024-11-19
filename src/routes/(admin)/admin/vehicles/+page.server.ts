@@ -6,7 +6,7 @@ export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
 	const vehiclesResponse = await fetch(new URL('/api/vehicle/api/vehicle/', API_GATEWAY_URL), {
 		headers: new Headers({
 			Authorization: `Bearer ${locals.token}`,
-			Origin: getClientAddress(),
+			Origin: getClientAddress ? getClientAddress() : 'http://localhost',
 			'Content-Type': 'application/json'
 		})
 	});
@@ -18,7 +18,7 @@ export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
 	const yearsRequest = await fetch(new URL('/api/vehicle/api/vehicle/year', API_GATEWAY_URL), {
 		headers: new Headers({
 			Authorization: `Bearer ${locals.token}`,
-			Origin: getClientAddress(),
+			Origin: getClientAddress ? getClientAddress() : 'http://localhost',
 			'Content-Type': 'application/json'
 		})
 	});

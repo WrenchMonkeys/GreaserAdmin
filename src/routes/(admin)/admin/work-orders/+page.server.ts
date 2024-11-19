@@ -6,7 +6,7 @@ export const load: PageServerLoad = async ({ locals, getClientAddress }) => {
 	const workOrdersResponse = await fetch(new URL('/api/work-order/all', API_GATEWAY_URL), {
 		headers: new Headers({
 			Authorization: `Bearer ${locals.token}`,
-			Origin: getClientAddress(),
+			Origin: getClientAddress ? getClientAddress() : 'http://localhost',
 			'Content-Type': 'application/json'
 		})
 	});

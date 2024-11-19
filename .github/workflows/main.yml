@@ -1,0 +1,35 @@
+name: Deploy to ECR
+
+on:
+   push:
+    branches: 
+     - main
+     
+jobs:
+  buildAndDeployGateway:
+    runs-on: ubuntu-latest
+    env:
+      ECR_REGISTRY: 704975185841.dkr.ecr.us-west-1.amazonaws.com/mobilegreaser
+      ECR_REPOSITORY: web-app
+      IMAGE_TAG: latest
+    name: Build Image
+    steps:
+    - name: Check out code
+      uses: actions/checkout@v2
+    - name: Configure AWS credentials
+      uses: aws-actions/configure-aws-credentials@v1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+
+    - name: Login to Amazon ECR
+      id: login-ecr
+      uses: aws-actions/amazon-ecr-login@v1
+
+    - name: Build, tag, and push image to Amazon ECR
+      run: |
+        aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 704975185841.dkr.ecr.us-west-1.amazonaws.com
+        docker build -t $${{env.ECR_REPOSITORY}} .
+        docker tag web-app:latest ${{env.ECR_REGISTRY}}/${{env.ECR_REPOSITORY}}:${{env.IMAGE_TAG}}
+        docker push ${{env.ECR_REGISTRY}}/${{env.ECR_REPOSITORY}}:${{env.IMAGE_TAG}}

@@ -30,6 +30,6 @@ jobs:
     - name: Build, tag, and push image to Amazon ECR
       run: |
         aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 704975185841.dkr.ecr.us-west-1.amazonaws.com
-        docker build --build-arg API_GATEWAY_URL=${{env.API_GATEWAY_URL}} --build-arg PUBLIC_SUPABASE_URL=${{env.PUBLIC_SUPABASE_URL}} --build-arg PUBLIC_SUPABASE_KEY=${{env.PUBLIC_SUPABASE_KEY}} --build-arg PUBLIC_POSTHOG_API_KEY=${{env.PUBLIC_POSTHOG_API_KEY}} --build-arg PUBLIC_POSTHOG_HOST=${{env.PUBLIC_POSTHOG_HOST}} -t web_app .
+        docker build --build-arg API_GATEWAY_URL=${{env.API_GATEWAY_URL}} --build-arg PUBLIC_SUPABASE_URL=$PUBLIC_SUPABASE_URL --build-arg PUBLIC_SUPABASE_KEY=${{env.PUBLIC_SUPABASE_KEY}} --build-arg PUBLIC_POSTHOG_API_KEY=${{env.PUBLIC_POSTHOG_API_KEY}} --build-arg PUBLIC_POSTHOG_HOST=${{env.PUBLIC_POSTHOG_HOST}} -t web_app .
         docker tag web_app:latest ${{env.ECR_REGISTRY}}/${{env.ECR_REPOSITORY}}:${{env.IMAGE_TAG}}
         docker push ${{env.ECR_REGISTRY}}/${{env.ECR_REPOSITORY}}:${{env.IMAGE_TAG}}

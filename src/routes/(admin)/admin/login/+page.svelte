@@ -31,7 +31,7 @@
   let supabase: SupabaseClient;
 
   if (!building) {
-    supabase = = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
+    supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
   }
 
 </script>

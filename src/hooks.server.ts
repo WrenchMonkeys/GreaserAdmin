@@ -3,9 +3,14 @@ import type { Handle } from '@sveltejs/kit';
 import { redirect } from '@sveltejs/kit';
 // import { API_GATEWAY_URL } from '$env/static/private';
 import { unwrapNullable } from '$lib/utils';
-import { createClient } from '@supabase/supabase-js';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 import { env } from '$env/dynamic/private';
-const supabase = createClient(env?.SUPABASE_URL, env.SUPABASE_KEY);
+import { building } from '$app/environment';
+let supabase: SupabaseClient;
+
+if (!building) {
+	supabase = createClient(env?.SUPABASE_URL, env.SUPABASE_KEY);
+}
 
 // we do want to ensure that the user token is valid on every protected route
 // call /api/authn/ to get the user from api and add to locals, do not store.

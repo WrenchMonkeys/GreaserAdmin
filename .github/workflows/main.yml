@@ -17,6 +17,7 @@ jobs:
     steps:
     - name: Check out code
       uses: actions/checkout@v2
+    - run: echo "PUBLIC_SUPABASE_URL $PUBLIC_SUPABASE_URL"
     - name: Configure AWS credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:

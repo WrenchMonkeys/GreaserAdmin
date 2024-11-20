@@ -8,6 +8,7 @@ on:
 jobs:
   buildAndDeployGateway:
     runs-on: ubuntu-latest
+    environment: "Prod Env Variables"
     env:
       ECR_REGISTRY: 704975185841.dkr.ecr.us-west-1.amazonaws.com/mobilegreaser
       ECR_REPOSITORY: web-app

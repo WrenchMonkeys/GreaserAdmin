@@ -4,7 +4,7 @@
   import { goto } from "$app/navigation";
   import { page } from '$app/stores';
   import { createClient } from '@supabase/supabase-js';
-  import { PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY } from '$env/static/public';
+  import { env } from '$env/dynamic/public';
 
   let countryCode = '1'
   let phoneNumber = '';
@@ -27,7 +27,7 @@
 
   $: disabled = phoneNumber?.length !== 14 && errorMessage === '';
 
-  const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
+  const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
 
 </script>
 

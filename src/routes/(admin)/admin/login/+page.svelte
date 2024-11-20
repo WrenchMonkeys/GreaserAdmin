@@ -3,8 +3,9 @@
   import PhoneNumberInput from "$lib/components/PhoneNumberInput.svelte";
   import { goto } from "$app/navigation";
   import { page } from '$app/stores';
-  import { createClient } from '@supabase/supabase-js';
+  import { createClient, SupabaseClient } from "@supabase/supabase-js";
   import { env } from '$env/dynamic/public';
+  import { building } from "$app/environment";
 
   let countryCode = '1'
   let phoneNumber = '';
@@ -27,7 +28,11 @@
 
   $: disabled = phoneNumber?.length !== 14 && errorMessage === '';
 
-  const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
+  let supabase: SupabaseClient;
+
+  if (!building) {
+    supabase = = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
+  }
 
 </script>
 

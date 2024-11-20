@@ -1,11 +1,16 @@
 import type { PageServerLoad } from './$types';
-import { createClient, type PostgrestResponse } from '@supabase/supabase-js';
+import { createClient, type PostgrestResponse, type SupabaseClient } from '@supabase/supabase-js';
 import { env } from '$env/dynamic/public';
 import type { ApplicationListItem } from '$lib/models/application';
+import { building } from '$app/environment';
 
-const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
+let supabase: SupabaseClient;
 
-export const load: PageServerLoad = async ({ locals, cookies }) => {
+if (!building) {
+	supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
+}
+
+export const load: PageServerLoad = async () => {
 	const { data: applications, error }: PostgrestResponse<ApplicationListItem> = await supabase
 		.from('technician_application')
 		.select('id, status, is_backgroundcheck_concented, is_terms_and_conditions_accepted')

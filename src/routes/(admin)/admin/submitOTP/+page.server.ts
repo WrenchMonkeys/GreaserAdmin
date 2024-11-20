@@ -4,11 +4,11 @@ import type {
 	Action
 } from '../../../../../.svelte-kit/types/src/routes/(admin)/admin/submitOTP/$types';
 import { createClient } from '@supabase/supabase-js';
-import { env } from '$env/dynamic/public';
+import { PUBLIC_SUPABASE_KEY, PUBLIC_SUPABASE_URL } from '$env/static/public';
 import { goto } from '$app/navigation';
 import { redirect, json, error } from '@sveltejs/kit';
 import { unwrapNullable } from '$lib/utils';
-const supabase = createClient(env.PUBLIC_SUPABASE_URL, env.PUBLIC_SUPABASE_KEY);
+const supabase = createClient(PUBLIC_SUPABASE_URL, PUBLIC_SUPABASE_KEY);
 
 export const load: PageServerLoad = async ({ locals }) => {
 	return {

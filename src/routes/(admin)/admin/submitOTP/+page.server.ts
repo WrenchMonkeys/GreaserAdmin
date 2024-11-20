@@ -8,7 +8,10 @@ import { env } from '$env/dynamic/public';
 import { goto } from '$app/navigation';
 import { redirect, json, error } from '@sveltejs/kit';
 import { unwrapNullable } from '$lib/utils';
-const supabase = createClient(env.PUBLIC_SUPABASE_URL ?? '', env.PUBLIC_SUPABASE_KEY ?? '');
+const supabase = createClient(
+	env.PUBLIC_SUPABASE_URL ?? 'https://bnbqapglonnjjbeyqwsc.supabase.co',
+	env.PUBLIC_SUPABASE_KEY ?? ''
+);
 
 export const load: PageServerLoad = async ({ locals }) => {
 	return {

@@ -1,6 +1,24 @@
-<script>
+<head>
+
+</head>
+
+
+<script lang="ts" defer>
   import googleBadge from '$lib/assets/google-play-badge.png';
   import appleBadge from '$lib/assets/apple-badge.svg'
+  import { browser } from "$app/environment";
+
+
+  if (browser) {
+    function setIframeWidth() {
+      const iframe = document.getElementById('waitlist-form');
+      iframe.style.width = window.innerWidth + 'px';
+    }
+
+    setIframeWidth();
+
+    window.addEventListener('resize', setIframeWidth);
+  }
 
 </script>
 
@@ -13,7 +31,7 @@
           <p class="py-6 text-secondary">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
             <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
 <!--              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
-              <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/2 mw-200"><img class="mx-auto w-full input-disabled" src={googleBadge} alt="google marketplace badge"></a>
+              <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
             </div>
         </div>
       </div>
@@ -79,7 +97,7 @@
   <div class="divider"></div>
 
   <div class="flex flex-col">
-    <iframe src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600"/>
+    <iframe id="waitlist-form" src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600" width=""/>
   </div>
 
   <div class="divider"></div>
@@ -120,7 +138,7 @@
       </div>
       <div class="flex flex-row justify-center align-middle items-center mt-4">
 <!--        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
-        <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+        <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
       </div>
     </div>
     <div class="p-3 flex align-middle items-center justify-center w-full md:w-1/2">

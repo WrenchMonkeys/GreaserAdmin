@@ -1,13 +1,13 @@
-FROM oven/bun:1 AS base
+FROM node:22.11-alpine
 
 WORKDIR /app
 
 COPY package*.json .
 
-RUN bun install
+RUN npm install
 
 COPY . .
 
-RUN bun run build
+RUN npm run build
 
-CMD bun run preview --host 0.0.0.0
+CMD node build

@@ -6,19 +6,7 @@
 <script lang="ts" defer>
   import googleBadge from '$lib/assets/google-play-badge.png';
   import appleBadge from '$lib/assets/apple-badge.svg'
-  import { browser } from "$app/environment";
-
-
-  if (browser) {
-    function setIframeWidth() {
-      const iframe = document.getElementById('waitlist-form');
-      iframe.style.width = window.innerWidth + 'px';
-    }
-
-    setIframeWidth();
-
-    window.addEventListener('resize', setIframeWidth);
-  }
+  import posthog from "posthog-js";
 
 </script>
 
@@ -97,7 +85,7 @@
   <div class="divider"></div>
 
   <div class="flex flex-col">
-    <iframe id="waitlist-form" src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600" width=""/>
+    <iframe id="waitlist-form" title="Join the waitlist today!" src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600" />
   </div>
 
   <div class="divider"></div>
@@ -146,6 +134,59 @@
     </div>
   </div>
 </div>
+
+<div class="divider"></div>
+
+<div class="flex flex-col items-center justify-center min-h-[600px]">
+  <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-4 p-3">
+    Frequently Asked Questions
+  </h2>
+  <div class="collapse bg-base-200 w-1/2 mb-4">
+    <input type="radio" name="my-accordion-1" checked />
+    <div class="collapse-title md:text-xl font-medium">What is Mobile Greaser?</div>
+    <div class="collapse-content">
+      <p class="font-light"><span class="font-bold lg:text-md">Mobile Greaser</span> is a platform that connects you with certified mobile mechanics who come to your location to perform car repairs and maintenance. Whether you’re at home, the office, or on the go, we make car care convenient, reliable, and stress-free.</p>
+    </div>
+  </div>
+  <div class="collapse bg-base-200 w-1/2 mb-4">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title md:text-xl font-medium">How do mobile car mechanics work?</div>
+    <div class="collapse-content">
+      <p class="font-light"><span class="font-bold lg:text-md">Mobile Greaser</span> connects you with expert mechanics who perform repairs at your chosen location. No need to visit a shop!</p>
+    </div>
+  </div>
+  <div class="collapse bg-base-200 w-1/2 mb-4">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title md:text-xl font-medium">What services does Mobile Greaser offer?</div>
+    <div class="collapse-content">
+      <p>Our mechanics can handle a wide range of services, including: </p>
+      <ol class="list-disc ml-6 pt-2 pb-4">
+        <li class="list-item">Oil changes</li>
+        <li class="list-item">Brake repairs</li>
+        <li class="list-item">Battery replacement</li>
+        <li class="list-item">Diagnostics and troubleshooting</li>
+        <li class="list-item">Fluid top-ups</li>
+        <li class="list-item">Tire changes and rotations</li>
+      </ol>
+      <p>For specific needs, simply enter your car issue in the app, and we’ll find the right mechanic for the job.</p>
+    </div>
+  </div>
+  <div class="collapse bg-base-200 w-1/2 ">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title md:text-xl font-medium">How does it work?</div>
+    <div class="collapse-content">
+      <p>Using <span class="font-bold">Mobile Greaser</span> is simple:</p>
+      <ol class="list-decimal ml-6 pt-2 pb-4">
+        <li class="list-item">Download the app and create an account.</li>
+        <li class="list-item">Enter your vehicle details and describe the issue.</li>
+        <li class="list-item">Choose a service time and location that’s convenient for you.</li>
+        <li class="list-item">A certified mobile mechanic will come to you and perform the service.</li>
+        <li class="list-item">Pay securely through the app when the job is done.</li>
+      </ol>
+    </div>
+  </div>
+</div>
+
 
 
 <style lang="scss">

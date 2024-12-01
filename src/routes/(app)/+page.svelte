@@ -12,8 +12,8 @@
           <h1 class="text-3xl md:text-5xl font-bold">On Demand Mobile Mechanics</h1>
           <p class="py-6 text-secondary">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
             <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
-              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
-              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full input-disabled" src={googleBadge} alt="google marketplace badge"></a>
+<!--              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
+              <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/2 mw-200"><img class="mx-auto w-full input-disabled" src={googleBadge} alt="google marketplace badge"></a>
             </div>
         </div>
       </div>
@@ -119,8 +119,8 @@
         <p class="text-secondary text-center">Embrace transparent pricing with our flat-rate system, eliminating concerns about unexpected upsells at the shop</p>
       </div>
       <div class="flex flex-row justify-center align-middle items-center mt-4">
-        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>
-        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+<!--        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
+        <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/2 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
       </div>
     </div>
     <div class="p-3 flex align-middle items-center justify-center w-full md:w-1/2">

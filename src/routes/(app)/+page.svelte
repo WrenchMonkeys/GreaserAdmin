@@ -137,27 +137,27 @@
 
 <div class="divider"></div>
 
-<div class="flex flex-col items-center justify-center h-[800px] px-6">
+<div class="flex flex-col items-center justify-center min-h-[800px] px-6">
   <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-4 pb-3">
     Frequently Asked Questions
   </h2>
   <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" checked />
-    <div class="collapse-title md:text-xl font-medium">What is Mobile Greaser?</div>
+    <div class="collapse-title md:text-xl h1 font-medium">What is MobileGreaser?</div>
     <div class="collapse-content">
-      <p class="font-light"><span class="font-bold lg:text-md">Mobile Greaser</span> is a platform that connects you with certified mobile mechanics who come to your location to perform car repairs and maintenance. Whether you’re at home, the office, or on the go, we make car care convenient, reliable, and stress-free.</p>
+      <p class="font-light"><span class="font-semibold">MobileGreaser</span> is a platform that connects you with certified mobile mechanics who come to your location to perform car repairs and maintenance. Whether you’re at home, the office, or on the go, we make car care convenient, reliable, and stress-free.</p>
     </div>
   </div>
   <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
     <div class="collapse-title md:text-xl font-medium">How do mobile car mechanics work?</div>
     <div class="collapse-content">
-      <p class="font-light"><span class="font-bold lg:text-md">Mobile Greaser</span> connects you with expert mechanics who perform repairs at your chosen location. No need to visit a shop!</p>
+      <p class="font-light"><span class="font-semibold">MobileGreaser</span> connects you with expert mechanics who perform repairs at your chosen location. No need to visit a shop!</p>
     </div>
   </div>
   <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
-    <div class="collapse-title md:text-xl font-medium">What services does Mobile Greaser offer?</div>
+    <div class="collapse-title md:text-xl font-medium">What services does <span class="font-semibold">MobileGreaser</span> offer?</div>
     <div class="collapse-content">
       <p>Our mechanics can handle a wide range of services, including: </p>
       <ol class="list-disc ml-6 pt-2 pb-4">
@@ -171,11 +171,11 @@
       <p>For specific needs, simply enter your car issue in the app, and we’ll find the right mechanic for the job.</p>
     </div>
   </div>
-  <div class="collapse bg-base-200 md:w-1/2 ">
+  <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
     <div class="collapse-title md:text-xl font-medium">How does it work?</div>
     <div class="collapse-content">
-      <p>Using <span class="font-bold">Mobile Greaser</span> is simple:</p>
+      <p>Using <span class="font-semibold">MobileGreaser</span> is simple:</p>
       <ol class="list-decimal ml-6 pt-2 pb-4">
         <li class="list-item">Download the app and create an account.</li>
         <li class="list-item">Enter your vehicle details and describe the issue.</li>
@@ -183,6 +183,26 @@
         <li class="list-item">A certified mobile mechanic will come to you and perform the service.</li>
         <li class="list-item">Pay securely through the app when the job is done.</li>
       </ol>
+    </div>
+  </div>
+
+  <div class="collapse bg-base-200 md:w-1/2 mb-4">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title md:text-xl font-medium">Can I cancel or reschedule my booking?</div>
+    <div class="collapse-content">
+      <p>
+        Yes! You can cancel or reschedule up to [insert timeframe] before your appointment directly through the app. Review our cancellation policy for details on refunds or fees.
+      </p>
+    </div>
+  </div>
+
+  <div class="collapse bg-base-200 md:w-1/2 mb-4">
+    <input type="radio" name="my-accordion-1" />
+    <div class="collapse-title md:text-xl font-medium">Why should I choose <span class="font-semibold">MobileGreaser</span>?</div>
+    <div class="collapse-content">
+      <p>
+        <span class="font-semibold">MobileGreaser</span> eliminates the hassle of traditional car repair by bringing expert mechanics directly to you. With our app, you can:
+      </p>
     </div>
   </div>
 </div>

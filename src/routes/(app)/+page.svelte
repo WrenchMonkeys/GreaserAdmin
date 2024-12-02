@@ -85,7 +85,7 @@
   <div class="divider"></div>
 
   <div class="flex flex-col">
-    <iframe id="waitlist-form" title="Join the waitlist today!" src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600" />
+    <iframe id="waitlist-form" src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600"/>
   </div>
 
   <div class="divider"></div>

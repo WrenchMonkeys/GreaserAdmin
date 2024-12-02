@@ -150,9 +150,17 @@
   </div>
   <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
-    <div class="collapse-title md:text-xl font-medium">How do mobile car mechanics work?</div>
+    <div class="collapse-title md:text-xl font-medium">How does it work?</div>
     <div class="collapse-content">
-      <p class="font-light"><span class="font-semibold">MobileGreaser</span> connects you with expert mechanics who perform repairs at your chosen location. No need to visit a shop!</p>
+      <p>Using <span class="font-semibold">MobileGreaser</span> is simple:</p>
+      <ol class="list-decimal ml-6 pt-2 pb-4">
+        <li class="list-item">Download the app and create an account.</li>
+        <li class="list-item">Create and customize your vehicle profile</li>
+        <li class="list-item">Save a payment method on your account</li>
+        <li class="list-item">Choose a service, time, payment method and location that’s convenient for you.</li>
+        <li class="list-item">A certified mobile mechanic will come to you and perform the service.</li>
+        <li class="list-item">Pay securely through the app when the job is done.</li>
+      </ol>
     </div>
   </div>
   <div class="collapse bg-base-200 md:w-1/2 mb-4">
@@ -167,25 +175,11 @@
         <li class="list-item">Diagnostics and troubleshooting</li>
         <li class="list-item">Fluid top-ups</li>
         <li class="list-item">Tire changes and rotations</li>
+        <li class="list-item">Roadside assistance</li>
       </ol>
-      <p>For specific needs, simply enter your car issue in the app, and we’ll find the right mechanic for the job.</p>
+      <p>and more.</p>
     </div>
   </div>
-  <div class="collapse bg-base-200 md:w-1/2 mb-4">
-    <input type="radio" name="my-accordion-1" />
-    <div class="collapse-title md:text-xl font-medium">How does it work?</div>
-    <div class="collapse-content">
-      <p>Using <span class="font-semibold">MobileGreaser</span> is simple:</p>
-      <ol class="list-decimal ml-6 pt-2 pb-4">
-        <li class="list-item">Download the app and create an account.</li>
-        <li class="list-item">Enter your vehicle details and describe the issue.</li>
-        <li class="list-item">Choose a service time and location that’s convenient for you.</li>
-        <li class="list-item">A certified mobile mechanic will come to you and perform the service.</li>
-        <li class="list-item">Pay securely through the app when the job is done.</li>
-      </ol>
-    </div>
-  </div>
-
   <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
     <div class="collapse-title md:text-xl font-medium">Can I cancel or reschedule my booking?</div>

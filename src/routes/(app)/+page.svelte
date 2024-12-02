@@ -191,7 +191,7 @@
     <div class="collapse-title md:text-xl font-medium">Can I cancel or reschedule my booking?</div>
     <div class="collapse-content">
       <p>
-        Yes! You can cancel or reschedule up to [insert timeframe] before your appointment directly through the app. Review our cancellation policy for details on refunds or fees.
+        Yes! You can cancel or reschedule up to 1 hour before your appointment directly through the app. Review our cancellation policy for details on refunds or fees.
       </p>
     </div>
   </div>
@@ -201,7 +201,7 @@
     <div class="collapse-title md:text-xl font-medium">Why should I choose <span class="font-semibold">MobileGreaser</span>?</div>
     <div class="collapse-content">
       <p>
-        <span class="font-semibold">MobileGreaser</span> eliminates the hassle of traditional car repair by bringing expert mechanics directly to you. With our app, you can:
+        <span class="font-semibold">MobileGreaser</span> eliminates the hassle of traditional car repair by bringing expert mechanics directly to you. Our services are convenient, transparent, and affordable, with a 5000-mile warranty on all work. Experience the future of car care with <span class="font-semibold">MobileGreaser</span> today!
       </p>
     </div>
   </div>

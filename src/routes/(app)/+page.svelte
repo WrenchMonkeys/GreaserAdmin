@@ -137,25 +137,25 @@
 
 <div class="divider"></div>
 
-<div class="flex flex-col items-center justify-center min-h-[600px]">
-  <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-4 p-3">
+<div class="flex flex-col items-center justify-center h-[800px] px-6">
+  <h2 class="text-2xl md:text-3xl font-bold tracking-tight text-center mb-4 pb-3">
     Frequently Asked Questions
   </h2>
-  <div class="collapse bg-base-200 w-1/2 mb-4">
+  <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" checked />
     <div class="collapse-title md:text-xl font-medium">What is Mobile Greaser?</div>
     <div class="collapse-content">
       <p class="font-light"><span class="font-bold lg:text-md">Mobile Greaser</span> is a platform that connects you with certified mobile mechanics who come to your location to perform car repairs and maintenance. Whether you’re at home, the office, or on the go, we make car care convenient, reliable, and stress-free.</p>
     </div>
   </div>
-  <div class="collapse bg-base-200 w-1/2 mb-4">
+  <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
     <div class="collapse-title md:text-xl font-medium">How do mobile car mechanics work?</div>
     <div class="collapse-content">
       <p class="font-light"><span class="font-bold lg:text-md">Mobile Greaser</span> connects you with expert mechanics who perform repairs at your chosen location. No need to visit a shop!</p>
     </div>
   </div>
-  <div class="collapse bg-base-200 w-1/2 mb-4">
+  <div class="collapse bg-base-200 md:w-1/2 mb-4">
     <input type="radio" name="my-accordion-1" />
     <div class="collapse-title md:text-xl font-medium">What services does Mobile Greaser offer?</div>
     <div class="collapse-content">
@@ -171,7 +171,7 @@
       <p>For specific needs, simply enter your car issue in the app, and we’ll find the right mechanic for the job.</p>
     </div>
   </div>
-  <div class="collapse bg-base-200 w-1/2 ">
+  <div class="collapse bg-base-200 md:w-1/2 ">
     <input type="radio" name="my-accordion-1" />
     <div class="collapse-title md:text-xl font-medium">How does it work?</div>
     <div class="collapse-content">

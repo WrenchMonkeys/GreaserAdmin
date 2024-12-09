@@ -1,7 +1,7 @@
 <script lang="ts">
-  const handleDeleteAccount = async () => {
-    window.location = 'https://mobilegreaser.com/profile'
-  }
+  // const handleDeleteAccount = async () => {
+  //   window.location = 'https://mobilegreaser.com/profile'
+  // }
 </script>
 
 <div class="container mx-auto p-4 flex-grow">
@@ -37,7 +37,6 @@
     <p>After 30 days, all retained data will be permanently deleted.</p>
   </section>
 
-  <button class="btn btn-danger mx-auto" on:click={handleDeleteAccount}>Request Account Deletion</button>
 </div>
 
 <style>

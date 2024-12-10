@@ -2,6 +2,24 @@
   // const handleDeleteAccount = async () => {
   //   window.location = 'https://mobilegreaser.com/profile'
   // }
+
+  import AuthModal from '$lib/components/authModal.svelte';
+  import { fade } from 'svelte/transition';
+
+  let showAuthModal = false;
+  let accountDeleted = false;
+
+  function openAuthModal() {
+    showAuthModal = !showAuthModal;
+  }
+
+  function handleAccountDeleted() {
+    showAuthModal = false;
+    accountDeleted = true;
+    setTimeout(() => {
+      accountDeleted = false;
+    }, 3000);
+  }
 </script>
 
 <div class="container mx-auto p-4 flex-grow">
@@ -36,6 +54,26 @@
     </ul>
     <p>After 30 days, all retained data will be permanently deleted.</p>
   </section>
+
+  <button
+    on:click={openAuthModal}
+    class="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-red-600 hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-red-500"
+  >
+    Delete my account
+  </button>
+
+  {#if showAuthModal}
+    <AuthModal on:accountDeleted={handleAccountDeleted} on:closeModal={openAuthModal} />
+  {/if}
+
+  {#if accountDeleted}
+    <div
+      class="fixed bottom-4 right-4 bg-green-500 text-white p-4 rounded-md shadow-lg"
+      transition:fade
+    >
+      Account successfully deleted!
+    </div>
+  {/if}
 
 </div>
 

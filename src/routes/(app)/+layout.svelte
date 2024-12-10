@@ -7,6 +7,7 @@
         </div>
         <div class="navbar-start">
           <a class="link link-hover  p-2" aria-current="page" href="/">Home</a>
+          <a class="link link-hover  p-2" aria-current="page" href="/technician">Technician</a>
         </div>
         <div class="navbar-center">
         </div>

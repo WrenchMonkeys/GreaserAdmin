@@ -15,12 +15,28 @@
     },
   ]
 
-  let email = "";
-  let email2 = "";
+  async function handleSendEmail(e) {
+    console.log("handleSendEmail", e)
+    const formData = new FormData(e.target);
+    const email = formData.get('email');
+    try {
+      const response = await fetch('https://script.google.com/macros/library/d/1OxOHfB8CRGCcdCPZnbzhMnxAkGsWqxxS1OuIJCsBfEOtOiHsJr55t8oM/1', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
 
-
-  const handleSendEmail = () => {
-
+      const result = await response.json();
+      if (result.success) {
+        console.log('Data sent successfully!');
+      } else {
+        console.error('Failed to send data:', result.error);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
   }
 
 
@@ -33,29 +49,29 @@
     <div class="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
         <div class="mb-12 lg:mb-0">
-          <h1 class="text-4xl md:text-5xl font-bold mb-6">
+          <h1 class="text-4xl sm:text-center md:text-5xl font-bold mb-6">
             Turn a wrench with Mobile Greaser
           </h1>
-          <p class="text-xl mb-8 text-purple-100">
+          <p class="text-xl sm:text-center mb-8 text-purple-100">
             Be your own boss, set your own hours, and achieve your goals with Mobile Greaser.
           </p>
-          <form class="max-w-md" on:submit|preventDefault={handleSendEmail}>
+          <form class="max-w-md mx-auto" on:submit|preventDefault={handleSendEmail}>
             <input
               type="email"
               placeholder="Enter your email to be notified when we launch"
               class="w-full px-6 py-4 rounded-lg mb-4 text-gray-900"
-              bind:value={email}
+              name="email"
             />
             <button type="submit" class="w-full bg-[#44D5B4] text-[#161A1D] font-semibold py-4 px-6 rounded-lg transition duration-300">
               Apply to work with us
             </button>
           </form>
         </div>
-        <div class="container relative d-flex justify-center items-center">
+        <div class="container relative mx-auto">
           <img
             src="/dude_with_wrench.jpg"
             alt="Driver with car"
-            class="rounded-lg shadow-2xl"
+            class="rounded-lg shadow-2xl mx-auto"
           />
         </div>
       </div>
@@ -164,7 +180,7 @@
           type="email"
           placeholder="Enter your email to be notified when we launch"
           class="w-full px-6 py-4 rounded-lg mb-4 text-gray-900"
-          bind:value={email}
+          name="email"
         />
         <button type="submit" class="w-full bg-[#44D5B4] text-[#161A1D] font-semibold py-4 px-6 rounded-lg transition duration-300">
           Apply to work with us

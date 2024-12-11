@@ -11,7 +11,7 @@
     },
     {
       question: "How much can I earn as a Mobile Greaser technician?",
-      answer: "Earnings vary based on your location, hours worked, and current demand. Technicians keep 100% of their tips and can track their earnings in real-time through the app."
+      answer: "Earnings vary based on your location, hours worked, and current demand."
     },
   ]
 

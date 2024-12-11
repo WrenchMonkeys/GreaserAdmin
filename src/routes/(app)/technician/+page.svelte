@@ -1,8 +1,6 @@
 <script>
-  import { CarFront, DollarSign, Clock, Shield, ChevronDown, WrenchIcon } from "lucide-svelte";
-  import * as sgMail from '@sendgrid/mail'
+  import { DollarSign, Clock, ChevronDown, WrenchIcon } from "lucide-svelte";
   import { env } from '$env/dynamic/public';
-  sgMail.setApiKey(env.PUBLIC_SENDGRID_API_KEY)
 
   let isOpen = {}
 
@@ -15,10 +13,6 @@
       question: "How much can I earn as a Mobile Greaser technician?",
       answer: "Earnings vary based on your location, hours worked, and current demand. Technicians keep 100% of their tips and can track their earnings in real-time through the app."
     },
-    {
-      question: "When and how often can I drive?",
-      answer: "You can drive whenever you want — there are no minimum hours. Sign in to the app and start accepting rides on your own schedule."
-    }
   ]
 
   let email = "";
@@ -26,20 +20,7 @@
 
 
   const handleSendEmail = () => {
-    const msg = {
-      to: 'team@mobilegreaser.com', // Change to your recipient
-      from: email.length > 0 ?? email2, // Change to your verified sender
-      subject: 'Mobile Greaser waitlist',
-      text: 'and them to the Mobile Greaser waitlist',
-    }
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log('Email sent')
-      })
-      .catch((error) => {
-        console.error(error)
-      })
+
   }
 
 
@@ -53,7 +34,7 @@
       <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
         <div class="mb-12 lg:mb-0">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">
-            Turn a wrench with Mobile Greaser and earn on your schedule
+            Turn a wrench with Mobile Greaser
           </h1>
           <p class="text-xl mb-8 text-purple-100">
             Be your own boss, set your own hours, and achieve your goals with Mobile Greaser.
@@ -61,7 +42,7 @@
           <form class="max-w-md" on:submit|preventDefault={handleSendEmail}>
             <input
               type="email"
-              placeholder="Enter your email to get started"
+              placeholder="Enter your email to be notified when we launch"
               class="w-full px-6 py-4 rounded-lg mb-4 text-gray-900"
               bind:value={email}
             />
@@ -177,13 +158,13 @@
   <section class="bg-[#161A1D] text-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold mb-8">Ready to start earning?</h2>
-      <p class="text-xl mb-8 text-purple-100">Sign up now and be on a job in as little as a week.</p>
+      <p class="text-xl mb-8 text-purple-100">Sign up now and be on a job as soon as we launch.</p>
       <form class="max-w-md mx-auto" on:submit|preventDefault={handleSendEmail}>
         <input
           type="email"
-          placeholder="Enter your email to get started"
+          placeholder="Enter your email to be notified when we launch"
           class="w-full px-6 py-4 rounded-lg mb-4 text-gray-900"
-          bind:value={email2}
+          bind:value={email}
         />
         <button type="submit" class="w-full bg-[#44D5B4] text-[#161A1D] font-semibold py-4 px-6 rounded-lg transition duration-300">
           Apply to work with us

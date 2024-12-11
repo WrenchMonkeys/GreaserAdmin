@@ -1,7 +1,8 @@
 <script>
   import { CarFront, DollarSign, Clock, Shield, ChevronDown, WrenchIcon } from "lucide-svelte";
   import * as sgMail from '@sendgrid/mail'
-  sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+  import { env } from '$env/dynamic/public';
+  sgMail.setApiKey(env.PUBLIC_SENDGRID_API_KEY)
 
   let isOpen = {}
 

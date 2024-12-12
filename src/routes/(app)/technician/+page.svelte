@@ -129,7 +129,6 @@
             <li>• 21 years or older</li>
             <li>• Clean driving record</li>
             <li>• Smartphone</li>
-            <li>• ASE certification or equivalent experience</li>
           </ul>
         </div>
         <div class="bg-white p-8 rounded-lg shadow-lg">

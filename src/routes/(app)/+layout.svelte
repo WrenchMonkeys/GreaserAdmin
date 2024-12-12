@@ -5,18 +5,20 @@
 <SvelteToast />
 <main class="min-h-screen flex flex-col">
   <div class="bg-base-200 mb-4 border-b border-b-gray-300">
-    <div class="container mx-auto ">
-      <nav class="navbar  p-2">
+    <div class="container mx-auto">
+      <nav class="navbar sticky top-0 p-2 bg-base-200 z-10">
         <div>
           <a class="btn btn-ghost w-full normal-case text-xl whitespace-nowrap" href="/">Mobile Greaser</a>
         </div>
         <div class="navbar-start">
-          <a class="link link-hover  p-2" aria-current="page" href="/">Home</a>
-          <a class="link link-hover  p-2" aria-current="page" href="/technician">Technician</a>
+          <a class="link link-hover p-2" aria-current="page" href="/">Home</a>
+          <a class="link link-hover p-2" aria-current="page" href="/technician">Technician</a>
         </div>
-        <div class="navbar-center">
-        </div>
+        <div class="navbar-center"></div>
         <div class="navbar-end">
+          <a href="https://www.producthunt.com/posts/mobile-greaser?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-mobile&#0045;greaser" target="_blank">
+            <img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=698022&theme=light" alt="Mobile&#0032;Greaser - Hassle&#0045;free&#0032;mobile&#0032;car&#0032;repairs&#0032;and&#0032;maintenance | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" />
+          </a>
         </div>
       </nav>
     </div>

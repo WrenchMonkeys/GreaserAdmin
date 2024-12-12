@@ -19,7 +19,7 @@
           <p class="py-6 text-secondary">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
             <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
 <!--              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
-              <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+<!--              <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>-->
             </div>
         </div>
       </div>

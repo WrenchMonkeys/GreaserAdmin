@@ -1,3 +1,8 @@
+<script>
+  import { SvelteToast } from '@zerodevx/svelte-toast'
+</script>
+
+<SvelteToast />
 <main class="min-h-screen flex flex-col">
   <div class="bg-base-200 mb-4 border-b border-b-gray-300">
     <div class="container mx-auto ">

@@ -1,6 +1,6 @@
 <script>
   import { DollarSign, Clock, ChevronDown, WrenchIcon } from "lucide-svelte";
-  import { env } from '$env/dynamic/public';
+  import { toast } from '@zerodevx/svelte-toast'
 
   let isOpen = {}
 
@@ -16,23 +16,33 @@
   ]
 
   async function handleSendEmail(e) {
-    console.log("handleSendEmail", e)
     const formData = new FormData(e.target);
     const email = formData.get('email');
     try {
-      const response = await fetch('https://script.google.com/macros/library/d/1OxOHfB8CRGCcdCPZnbzhMnxAkGsWqxxS1OuIJCsBfEOtOiHsJr55t8oM/1', {
+      const response = await fetch('https://api.getwaitlist.com/api/v1/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email, waitlist_id: 23036 }),
       });
 
-      const result = await response.json();
-      if (result.success) {
-        console.log('Data sent successfully!');
+      if (response.ok) {
+        toast.push('Signed up successfully!', {
+          theme: {
+            '--toastColor': 'mintcream',
+            '--toastBackground': 'rgba(72,187,120,0.9)',
+            '--toastBarBackground': '#2F855A'
+          }
+        })
       } else {
-        console.error('Failed to send data:', result.error);
+        toast.push('Failed to sign up to waitlist.', {
+          theme: {
+            '--toastBackground': 'red',
+            '--toastColor': 'white',
+            '--toastBarBackground': 'olive'
+          }
+        })
       }
     } catch (error) {
       console.error('Error:', error);
@@ -69,7 +79,7 @@
         </div>
         <div class="container relative mx-auto">
           <img
-            src="/dude_with_wrench.jpg"
+            src="/man_repair.jpg"
             alt="Driver with car"
             class="rounded-lg shadow-2xl mx-auto"
           />

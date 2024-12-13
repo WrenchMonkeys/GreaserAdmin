@@ -15,7 +15,7 @@
 <div class="container min-h-full mx-auto grow my-9">
   <article class="sm:mt-4 md:mt-9">
     <hgroup class="mb-4">
-      <h1 class="text-4xl font-semibold">{data.meta.title}</h1>
+      <h1 class="sm:text-lg lg:text-4xl font-semibold">{data.meta.title}</h1>
       <p class="text-sm">Published at {data.meta.date}</p>
     </hgroup>
 

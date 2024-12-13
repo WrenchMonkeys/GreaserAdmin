@@ -1,6 +1,5 @@
 <script lang="ts">
   import posthog from "posthog-js";
-  import 'modern-normalize/modern-normalize.css';
   import '../app.css';
   import { browser } from "$app/environment";
   import { page } from "$app/stores";

@@ -1,15 +1,29 @@
 import adapter from '@sveltejs/adapter-node';
 import preprocess from 'svelte-preprocess';
+import { mdsvex } from 'mdsvex';
+import { defineConfig } from 'vitest/config';
+
+const mdsvexOptions = defineConfig({
+	extensions: ['.svelte.md', '.md', '.svx'],
+
+	smartypants: {
+		dashes: 'oldschool'
+	}
+});
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
+	extensions: ['.svelte', '.md'],
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: preprocess({
-		scss: {
-			prependData: '@use "./src/lib/styles/_functions";'
-		}
-	}),
+	preprocess: [
+		preprocess({
+			scss: {
+				prependData: '@use "./src/lib/styles/_functions";'
+			}
+		}),
+		mdsvex(mdsvexOptions)
+	],
 
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.

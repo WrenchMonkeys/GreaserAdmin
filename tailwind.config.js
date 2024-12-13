@@ -1,6 +1,6 @@
 module.exports = {
-	content: ['./src/routes/**/*.{svelte,js,ts}'],
-	plugins: [require('daisyui')],
+	content: ['./src/routes/**/*.{html,svelte,js,ts}'],
+	plugins: [require('daisyui'), require('@tailwindcss/typography')],
 	daisyui: {
 		themes: [
 			{

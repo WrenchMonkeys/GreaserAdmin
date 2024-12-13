@@ -54,6 +54,7 @@
     "@mediakular/gridcraft": "^0.2.9",
     "@supabase/supabase-js": "^2.45.4",
     "@sveltejs/adapter-node": "^5.2.9",
+    "@tailwindcss/typography": "^0.5.15",
     "d3": "^7.8.5",
     "daisyui": "^4.4.2",
     "lucide-svelte": "^0.468.0",

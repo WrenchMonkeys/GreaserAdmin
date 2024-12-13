@@ -126,7 +126,7 @@
       </div>
       <div class="flex flex-row justify-center align-middle items-center mt-4">
 <!--        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
-        <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+<!--        <a href="https://play.google.com/apps/testing/com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>-->
       </div>
     </div>
     <div class="p-3 flex align-middle items-center justify-center w-full md:w-1/2">

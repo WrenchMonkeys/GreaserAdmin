@@ -7,6 +7,47 @@
   import googleBadge from '$lib/assets/google-play-badge.png';
   import appleBadge from '$lib/assets/apple-badge.svg'
   import posthog from "posthog-js";
+  import { toast } from "@zerodevx/svelte-toast";
+
+  $: isLoading = false;
+
+  async function handleSendEmail(e) {
+    isLoading = true;
+    const formData = new FormData(e.target);
+    const email = formData.get('email');
+    try {
+      const response = await fetch('https://api.getwaitlist.com/api/v1/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email, waitlist_id: 23083 }),
+      });
+
+      if (response.ok) {
+        toast.push('Signed up successfully!', {
+          theme: {
+            '--toastColor': 'mintcream',
+            '--toastBackground': 'rgba(72,187,120,0.9)',
+            '--toastBarBackground': '#2F855A'
+          }
+        })
+      } else {
+        toast.push('Failed to sign up to waitlist.', {
+          theme: {
+            '--toastBackground': 'red',
+            '--toastColor': 'white',
+            '--toastBarBackground': 'olive'
+          }
+        })
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+    finally {
+      isLoading = false;
+    }
+  }
 
 </script>
 
@@ -85,7 +126,15 @@
   <div class="divider"></div>
 
   <div class="flex flex-col">
-    <iframe id="waitlist-form" src="https://cdn.forms-content-1.sg-form.com/cd244b03-e4f6-11ee-88a0-7aefeddface1" height="600"/>
+    <div class="border-2 border-secondary border-dashed max-w-[600px] mx-auto p-5 rounded-md">
+      <h2 class="font-semibold lg:text-3xl sm:text-1xl text-primary">Join the Future of On-Demand Vehicle Care!</h2>
+      <p class="font-light text-secondary my-4 text-sm">Welcome to the future of Mobile Greaser! We're thrilled to have you join our community. By signing up, you'll be among the first to experience our innovative features and stay updated with the latest news. Thank you for your interest and support!</p>
+      <form on:submit|preventDefault={handleSendEmail}>
+        <label for="email" class="label label-text text-primary text-lg">Email</label>
+        <input id="email" type="text" name="email" class="input input-bordered w-full input-ghost input-md  rounded-md shadow-sm" placeholder="Enter Your Email Address" required />
+        <button type="submit" class={"btn btn-outline btn-primary mt-6 " + (isLoading ? 'btn-disabled' : '') }>Submit</button>
+      </form>
+    </div>
   </div>
 
   <div class="divider"></div>

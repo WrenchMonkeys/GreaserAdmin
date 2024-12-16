@@ -37,6 +37,7 @@
         <section class="p-2 d-flex flex-col md:justify-between">
           <h5 class="font-bold mb-2">Company</h5>
           <p><a class="link link-hover link-primary" href="https://x.com/MobileGreaser">Twitter</a></p>
+          <p><a class="link link-hover link-primary" href="https://www.tiktok.com/@mobile.greaser">TikTok</a></p>
           <p><a class="link link-hover link-primary" href="mailto:team@mobilegreaser.com">team@mobilegreaser.com</a></p>
           <p><a class="link link-hover link-primary" href="/blog">Take a look at our blog!</a></p>
         </section>

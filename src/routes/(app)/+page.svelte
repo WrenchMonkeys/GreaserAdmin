@@ -53,7 +53,7 @@
 
 <div class="container mx-auto">
   <div class="flex flex-col items-center md:flex-row ">
-    <div class="hero min-h-screen ">
+    <div class="hero h-screen max-h-[600px] ">
       <div class="hero-content text-center">
         <div class="max-w-lg">
           <h1 class="text-3xl md:text-5xl font-bold">On Demand Mobile Mechanics</h1>
@@ -122,6 +122,10 @@
 <!--      </div>-->
 <!--    </div>-->
 <!--  </div>-->
+  <div class="divider"></div>
+
+  <!--ARCADE EMBED START--><div style="position: relative; aspect-ratio: 130.543/100; height: 100%; max-height: 1200px; width: 100%;"><iframe src="https://demo.arcade.software/jMMhViE0XyIkIjzQaLdn?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="Mobile Greaser Consumer App" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: 80vh; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
 
   <div class="divider"></div>
 

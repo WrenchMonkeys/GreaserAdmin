@@ -53,7 +53,7 @@
 
 <div class="container mx-auto">
   <div class="flex flex-col items-center md:flex-row ">
-    <div class="hero h-screen max-h-[600px] ">
+    <div class="hero h-screen max-h-[1200px] ">
       <div class="hero-content text-center">
         <div class="max-w-lg">
           <h1 class="text-3xl md:text-5xl font-bold">On Demand Mobile Mechanics</h1>

@@ -179,23 +179,82 @@
 </script>
 
 <div class="container mx-auto">
-  <div class="flex flex-col items-center md:flex-row ">
-    <div class="hero h-screen max-h-[1200px] ">
-      <div class="hero-content text-center">
-        <div class="max-w-lg">
-          <h1 class="text-3xl md:text-5xl font-bold">On Demand Mobile Mechanics</h1>
-          <p class="py-6 text-secondary">Empower your vehicle care with Mobile Greaser—available anytime, anywhere, and tailored to your convenience.</p>
-            <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
-<!--              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
-              <a href="https://play.google.com/store/apps/details?id=com.mobilegreaser" class=" md:w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+  <section class="relative " aria-label="Mobile Mechanic Services">
+    <div class="flex flex-col items-center md:flex-row">
+      <div class="hero h-screen max-h-[1200px]">
+        <div class="hero-content text-center">
+          <div class="max-w-lg">
+            <h1 class="text-3xl md:text-5xl font-bold">
+              On Demand Mobile Mechanics Near You
+            </h1>
+            <div class="mt-4 text-lg text-blue-600 font-semibold">
+              Available 24/7 for On-Site Auto Repairs
             </div>
+            <p class="py-6 text-secondary">
+              Mobile Greaser brings professional mechanics directly to your location. Expert auto repair and maintenance services when and where you need them.
+            </p>
+
+            <!-- Service Highlights -->
+            <div class="grid grid-cols-2 gap-3 mb-6 text-left">
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Same-Day Service</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Licensed Mechanics</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Any Location</span>
+              </div>
+              <div class="flex items-center space-x-2">
+                <svg class="w-5 h-5 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+                <span>Fair Pricing</span>
+              </div>
+            </div>
+
+            <div class="my-auto flex flex-row justify-center align-middle items-center mt-4">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.mobilegreaser"
+                class="md:w-1/3 mw-200"
+                aria-label="Download our mobile mechanic service app on Google Play"
+              >
+                <img
+                  class="mx-auto w-full"
+                  src={googleBadge}
+                  alt="Download Mobile Greaser - Find mobile mechanics near you on Google Play"
+                  width="200"
+                  height="60"
+                  loading="eager"
+                />
+              </a>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="p-3 flex align-middle d-flex justify-center align-items-center w-full md:w-1/2">
+        <dotlottie-player
+          src="https://lottie.host/2e1acaaf-5386-488f-8fe5-8e45aafa3c61/wug0qbTojd.json"
+          background="transparent"
+          speed="1"
+          style="width: 400px; height: 400px;"
+          loop
+          autoplay
+          aria-label="Mobile mechanic service illustration"
+        ></dotlottie-player>
+      </div>
     </div>
-    <div class="p-3 flex align-middle d-flex justify-center align-items-center w-full md:w-1/2">
-      <dotlottie-player src="https://lottie.host/2e1acaaf-5386-488f-8fe5-8e45aafa3c61/wug0qbTojd.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
-    </div>
-  </div>
+  </section>
 
   <div class="divider"></div>
 

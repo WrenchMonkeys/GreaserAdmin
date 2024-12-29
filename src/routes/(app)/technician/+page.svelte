@@ -53,7 +53,6 @@
 </script>
 
 <div class="bg-white">
-  <!-- Hero Section -->
   <section class="relative bg-[#161A1D] text-white">
     <div class="absolute inset-0 bg-gradient-to-r opacity-90"></div>
     <div class="relative max-w-7xl mx-auto px-4 py-24 sm:px-6 lg:px-8">
@@ -88,7 +87,6 @@
     </div>
   </section>
 
-  <!-- Benefits Section -->
   <section class="py-20 bg-gray-50">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-16">Why work with Mobile Greaser?</h2>
@@ -118,7 +116,6 @@
     </div>
   </section>
 
-  <!-- Requirements Section -->
   <section class="py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-16">Requirements</h2>
@@ -152,7 +149,6 @@
     </div>
   </section>
 
-  <!-- FAQ Section -->
   <section class="py-20 bg-gray-50">
     <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
       <h2 class="text-3xl font-bold text-center mb-16">Frequently Asked Questions</h2>
@@ -179,7 +175,6 @@
     </div>
   </section>
 
-  <!-- CTA Section -->
   <section class="bg-[#161A1D] text-white py-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
       <h2 class="text-3xl font-bold mb-8">Ready to start earning?</h2>

@@ -401,7 +401,7 @@
         Ready for Hassle-Free Car Repair?
       </h2>
       <p class="text-xl mb-8 max-w-2xl mx-auto" in:fly={{ y: 50, duration: 1000, delay: 200 }}>
-        Join thousands of satisfied customers in Mesquite who trust MobileGreaser for their auto repair
+        Join our growing list of satisfied customers who trust MobileGreaser for their auto repair
         and maintenance needs. Schedule your service today or join our waitlist for priority access.
       </p>
       <button

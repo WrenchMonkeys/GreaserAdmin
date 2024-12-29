@@ -12,10 +12,11 @@
   <meta property="keywords" content={data.meta.categories} />
 </svelte:head>
 
-<div class="container min-h-full mx-auto grow my-9">
+<div class="container min-h-full mx-auto grow my-9 p-3">
   <article class="sm:mt-4 md:mt-9">
     <hgroup class="mb-4">
-      <h1 class="sm:text-2xl lg:text-4xl font-semibold">{data.meta.title}</h1>
+      <h1 class="text-2xl lg:text-4xl font-semibold">{data.meta.title}</h1>
+      <p class="text-sm my-2">{data.meta.description}</p>
       <p class="text-sm">Published at {data.meta.date}</p>
     </hgroup>
 

@@ -8,8 +8,17 @@
   import appleBadge from '$lib/assets/apple-badge.svg'
   import posthog from "posthog-js";
   import { toast } from "@zerodevx/svelte-toast";
+  import { onMount } from "svelte";
+  import { fade, fly, scale, slide } from 'svelte/transition';
+  import { createEventDispatcher } from 'svelte';
+  import CustomModal from '$lib/components/CustomModal.svelte';
+
+  let isModalOpen = false;
+  let visible = false;
 
   $: isLoading = false;
+
+  const dispatch = createEventDispatcher();
 
   async function handleSendEmail(e) {
     isLoading = true;
@@ -49,6 +58,124 @@
     }
   }
 
+
+
+  onMount(() => {
+    const ctaobserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          visible = true;
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    ctaobserver.observe(<Element>document.querySelector('#cta'));
+
+
+    const htwObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          visible = true;
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    htwObserver.observe(<Element>document.querySelector('#how-it-works'));
+
+    const servicesObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          visible = true;
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    servicesObserver.observe(<Element>document.querySelector('#services'));
+
+    const trustObserver = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          visible = true;
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    trustObserver.observe(<Element>document.querySelector('#trust'));
+  });
+
+  const howItWorksSteps = [
+    {
+      number: 1,
+      title: 'Book Your Service',
+      description: 'Tell us about your vehicle issues and select a convenient time. Our mobile mechanics are available 7 days a week.'
+    },
+    {
+      number: 2,
+      title: 'Mechanic Comes to You',
+      description: 'Our certified mobile mechanics arrive at your location with all the necessary tools and parts.'
+    },
+    {
+      number: 3,
+      title: 'Get Back on the Road',
+      description: 'Receive transparent pricing, expert service, and a detailed report of the work performed.'
+    }
+  ];
+
+  const services = [
+    {
+      title: 'Emergency Services',
+      description: 'Rapid response for battery replacements, tire repairs, starter issues, and other roadside emergencies.',
+      icon: '🚨'
+    },
+    {
+      title: 'Maintenance Services',
+      description: 'Convenient mobile oil changes, brake service, tire rotations, and comprehensive vehicle inspections.',
+      icon: '🔧'
+    },
+    {
+      title: 'Diagnostic Services',
+      description: 'Advanced diagnostic equipment to identify issues with clear explanations and upfront pricing.',
+      icon: '🔍'
+    }
+  ];
+
+  const trustFactors = [
+    {
+      title: 'Certified Mechanics',
+      description: 'ASE-certified and thoroughly vetted professionals',
+      icon: '👨‍🔧'
+    },
+    {
+      title: 'Convenient Service',
+      description: 'Service at your preferred location',
+      icon: '📍'
+    },
+    {
+      title: 'Transparent Pricing',
+      description: 'Upfront quotes with no hidden fees',
+      icon: '💰'
+    },
+    {
+      title: 'Service Guarantee',
+      description: 'Parts and labor warranty included',
+      icon: '✅'
+    }
+  ];
+
+  function openModal() {
+    isModalOpen = true;
+  }
+
+  function closeModal() {
+    isModalOpen = false;
+  }
+
+
+
 </script>
 
 <div class="container mx-auto">
@@ -70,7 +197,68 @@
     </div>
   </div>
 
-<!--  <div class="divider"></div>-->
+  <div class="divider"></div>
+
+  <section class=" py-20">
+    {#if visible}
+      <div class="container mx-auto px-4" in:fade={{ duration: 1000 }}>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6" in:fly={{ y: 50, duration: 1000 }}>
+          Expert Mobile Mechanics at Your Location.
+        </h1>
+        <p class="text-xl mb-8 max-w-2xl" in:fly={{ y: 50, duration: 1000, delay: 200 }}>
+          Don't waste time at the auto shop. MobileGreaser brings certified mechanics directly to your home,
+          office, or roadside. Get professional car repair and maintenance services
+          with just a few taps.
+        </p>
+      </div>
+    {/if}
+  </section>
+
+  <section id="how-it-works" class="py-16 bg-gray-100 bg-opacity-50">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">How MobileGreaser Works</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {#if visible}
+          {#each howItWorksSteps as step, i}
+            <div
+              class="bg-gray-50 bg-opacity-40 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
+              in:fade={{ duration: 800, delay: i * 200 }}
+            >
+              <div class="w-12 h-12 bg-[#44D5B4] text-[#161A1D] rounded-full flex items-center justify-center
+                        text-xl font-bold mb-4">
+                {step.number}
+              </div>
+              <h3 class="text-xl font-semibold mb-4">{step.title}</h3>
+              <p class="text-gray-600">{step.description}</p>
+            </div>
+          {/each}
+        {/if}
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-16">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold text-center mb-12">Mobile Auto Repair Services</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        {#if visible}
+          {#each services as service, i}
+            <div
+              class="bg-gray-50 bg-opacity-40 p-6 rounded-lg hover:shadow-lg transition-all duration-300"
+              in:slide={{ duration: 800, delay: i * 200 }}
+            >
+              <div class="text-4xl mb-4">{service.icon}</div>
+              <h3 class="text-xl font-semibold mb-4">{service.title}</h3>
+              <p class="text-gray-600">{service.description}</p>
+            </div>
+          {/each}
+        {/if}
+      </div>
+    </div>
+  </section>
+
+
+
 
 <!--  <div class="flex flex-col">-->
 <!--    <div class="p-3 flex flex-col justify-center items-center mb-4">-->
@@ -122,24 +310,8 @@
 <!--      </div>-->
 <!--    </div>-->
 <!--  </div>-->
-  <div class="divider"></div>
 
-  <!--ARCADE EMBED START--><div class="aspect-[70/100] md:aspect-[130.543/100]" style="position: relative; height: 100%; max-height: 1200px; width: 100%;"><iframe src="https://demo.arcade.software/jMMhViE0XyIkIjzQaLdn?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="Mobile Greaser Consumer App" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: 80vh; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
-
-
-  <div class="divider"></div>
-
-  <div class="flex flex-col">
-    <div class="border-2 border-secondary border-dashed max-w-[600px] mx-auto p-5 rounded-md">
-      <h2 class="font-semibold lg:text-3xl sm:text-1xl text-primary">Join the Future of On-Demand Vehicle Care!</h2>
-      <p class="font-light text-secondary my-4 text-sm">Welcome to the future of Mobile Greaser! We're thrilled to have you join our community. By signing up, you'll be among the first to experience our innovative features and stay updated with the latest news. Thank you for your interest and support!</p>
-      <form on:submit|preventDefault={handleSendEmail}>
-        <label for="email" class="label label-text text-primary text-lg">Email</label>
-        <input id="email" type="text" name="email" class="input input-bordered w-full input-ghost input-md  rounded-md shadow-sm" placeholder="Enter Your Email Address" required />
-        <button type="submit" class={"btn btn-outline btn-primary mt-6 " + (isLoading ? 'btn-disabled' : '') }>Submit</button>
-      </form>
-    </div>
-  </div>
+<!--  <div class="divider"></div>-->
 
   <div class="divider"></div>
 
@@ -177,16 +349,80 @@
       <div class="max-w-lg py-4 mx-auto">
         <p class="text-secondary text-center">Embrace transparent pricing with our flat-rate system, eliminating concerns about unexpected upsells at the shop</p>
       </div>
-      <div class="flex flex-row justify-center align-middle items-center mt-4">
-<!--        <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
-        <a href="https://play.google.com/store/apps/details?id=com.mobilegreaser" class="w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
-      </div>
     </div>
     <div class="p-3 flex align-middle items-center justify-center w-full md:w-1/2">
       <dotlottie-player src="https://lottie.host/cd76bc67-7005-48b6-9198-442bc1d3ff62/D4sO2a2uiY.json" background="transparent" speed="1" style="width: 400px; height: 400px;" loop autoplay></dotlottie-player>
     </div>
   </div>
 </div>
+
+<div class="divider"/>
+
+<section id="trust" class="py-16">
+  <div class="container mx-auto px-4">
+    <h2 class="text-3xl font-bold text-center mb-12">Why Choose MobileGreaser</h2>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {#if visible}
+        {#each trustFactors as factor, i}
+          <div
+            class="text-center transform hover:scale-105 transition-all duration-300"
+            in:scale={{ duration: 800, delay: i * 200 }}
+          >
+            <div class="text-4xl mb-4">{factor.icon}</div>
+            <h3 class="text-xl font-semibold mb-4">{factor.title}</h3>
+            <p class="text-gray-600">{factor.description}</p>
+          </div>
+        {/each}
+      {/if}
+    </div>
+  </div>
+</section>
+
+<div class="divider"/>
+
+
+<section class="py-16 ">
+  <div class="container mx-auto px-4 text-center">
+    <h2 class="text-3xl font-bold mb-4">Experience MobileGreaser In Action</h2>
+    <p class="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
+      See how easy it is to book a mobile mechanic in your area. Try our interactive booking process below.
+    </p>
+    <!--ARCADE EMBED START--><div class="aspect-[70/100] md:aspect-[130.543/100]" style="position: relative; height: 100%; max-height: 1200px; width: 100%;"><iframe src="https://demo.arcade.software/jMMhViE0XyIkIjzQaLdn?embed&embed_mobile=inline&embed_desktop=inline&show_copy_link=true" title="Mobile Greaser Consumer App" frameborder="0" loading="lazy" webkitallowfullscreen mozallowfullscreen allowfullscreen allow="clipboard-write" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; max-height: 80vh; color-scheme: light;" ></iframe></div><!--ARCADE EMBED END-->
+
+  </div>
+</section>
+
+<div class="divider"/>
+
+<section id="cta" class=" py-16">
+  {#if visible}
+    <div class="container mx-auto px-4 text-center" in:fade={{ duration: 1000 }}>
+      <h2 class="text-3xl font-bold mb-6" in:fly={{ y: 50, duration: 1000 }}>
+        Ready for Hassle-Free Car Repair?
+      </h2>
+      <p class="text-xl mb-8 max-w-2xl mx-auto" in:fly={{ y: 50, duration: 1000, delay: 200 }}>
+        Join thousands of satisfied customers in Mesquite who trust MobileGreaser for their auto repair
+        and maintenance needs. Schedule your service today or join our waitlist for priority access.
+      </p>
+      <button
+        on:click={openModal}
+        class="bg-[#44D5B4] text-[#161A1D] px-8 py-3 rounded-lg font-semibold hover:bg-[#44D5B4]
+             transition-all duration-300 hover:scale-105 transform"
+        in:fly={{ y: 50, duration: 1000, delay: 400 }}
+      >
+        Join Waitlist
+      </button>
+      <p class="text-md font-light my-2">or</p>
+
+      <div in:fly={{ y: 50, duration: 1000, delay: 400 }} class="my-auto flex flex-row justify-center align-middle items-center mt-4 transition-all duration-300 hover:scale-105 transform">
+        <!--              <a href="https://play.google.com/store/apps?gl=us" class="w-1/2 mw-200"><img class="mx-auto w-full" src={appleBadge} alt="apple marketplace badge"></a>-->
+        <a href="https://play.google.com/store/apps/details?id=com.mobilegreaser" class=" md:w-1/3 mw-200"><img class="mx-auto w-full" src={googleBadge} alt="google marketplace badge"></a>
+      </div>
+
+    </div>
+  {/if}
+</section>
+
 
 <div class="divider"></div>
 
@@ -253,6 +489,21 @@
     </div>
   </div>
 </div>
+
+<CustomModal isOpen={isModalOpen} on:close={closeModal}>
+  <div class="flex flex-col">
+    <div class="border-2 border-secondary border-dashed max-w-[800px] mx-auto p-5 rounded-md">
+      <h2 class="font-semibold lg:text-3xl sm:text-1xl text-primary">Join the Future of On-Demand Vehicle Care!</h2>
+      <p class="font-light text-secondary my-4 text-sm">Welcome to the future of Mobile Greaser! We're thrilled to have you join our community. By signing up, you'll be among the first to experience our innovative features and stay updated with the latest news. Thank you for your interest and support!</p>
+      <form on:submit|preventDefault={handleSendEmail} class="w-full">
+        <label for="email" class="label label-text text-primary text-lg">Email</label>
+        <input id="email" type="text" name="email" class="input input-bordered w-full input-ghost input-md  rounded-md shadow-sm" placeholder="Enter Your Email Address" required />
+        <button type="submit" class={"btn btn-outline btn-primary mt-6 " + (isLoading ? 'btn-disabled' : '') }>Submit</button>
+      </form>
+    </div>
+  </div>
+</CustomModal>
+
 
 
 

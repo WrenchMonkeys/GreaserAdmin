@@ -34,6 +34,8 @@ categories:
 published: true
 ---
 
+![Animated Race Car in Shop](/car_in_shop.gif)
+
 ## Key Takeaways
 - Mobile mechanic prices typically range from $60-150 per hour
 - MobileGreaser uses flat-rate pricing for transparent, upfront costs

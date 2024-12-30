@@ -180,7 +180,7 @@
 
 <div class="container mx-auto">
   <section class="relative " aria-label="Mobile Mechanic Services">
-    <div class="flex flex-col items-center md:flex-row">
+    <div class="flex flex-col items-center md:flex-row before:bg-[url('/mesh_grid.png')] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-cover before:bg-center before:opacity-10 before:z-[1]">
       <div class="hero h-screen max-h-[1200px]">
         <div class="hero-content text-center">
           <div class="max-w-lg">
@@ -283,7 +283,7 @@
               class="bg-gray-50 bg-opacity-40 p-6 rounded-lg shadow-lg transform hover:scale-105 transition-all duration-300"
               in:fade={{ duration: 800, delay: i * 200 }}
             >
-              <div class="w-12 h-12 bg-[#44D5B4] text-[#161A1D] rounded-full flex items-center justify-center
+              <div class="w-12 h-12  border border-solid border-[#161A1D] text-[#161A1D] rounded-full flex items-center justify-center
                         text-xl font-bold mb-4">
                 {step.number}
               </div>

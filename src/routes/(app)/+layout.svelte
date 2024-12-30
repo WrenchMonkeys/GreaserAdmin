@@ -55,10 +55,10 @@
           <div class="flex flex-row items-baseline">
             <h5 class="text-sm font-semibold tracking-tight mb-2 mr-4">Cities: </h5>
             <ul class="list-inside text-sm flex flex-row justify-around items-center">
-              <li class="list-item mr-6"><a class="link link-accent link-hover " href="/cities/nevada/las-vegas">Las Vegas, NV</a></li>
-              <li class="list-item mr-6"><a class="link link-accent link-hover" href="/cities/nevada/mesquite">Mesquite, NV</a></li>
-              <li class="list-item mr-6"><a class="link link-accent link-hover" href="/cities/oklahoma/oklahoma-city">OKC, OK</a></li>
-              <li class="list-item mr-6"><a class="link link-accent link-hover" href="/cities/oklahoma/tulsa">Tulsa, OK</a></li>
+              <li class="list-item mr-6"><a class="link link-primary link-hover " href="/cities/nevada/las-vegas">Las Vegas, NV</a></li>
+              <li class="list-item mr-6"><a class="link link-primary link-hover" href="/cities/nevada/mesquite">Mesquite, NV</a></li>
+              <li class="list-item mr-6"><a class="link link-primary link-hover" href="/cities/oklahoma/oklahoma-city">OKC, OK</a></li>
+              <li class="list-item mr-6"><a class="link link-primary link-hover" href="/cities/oklahoma/tulsa">Tulsa, OK</a></li>
             </ul>
           </div>
         </div>

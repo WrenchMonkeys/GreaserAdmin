@@ -417,29 +417,6 @@
 
 <div class="divider"/>
 
-<section id="trust" class="py-16">
-  <div class="container mx-auto px-4">
-    <h2 class="text-3xl font-bold text-center mb-12">Why Choose MobileGreaser</h2>
-    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-      {#if visible}
-        {#each trustFactors as factor, i}
-          <div
-            class="text-center transform hover:scale-105 transition-all duration-300"
-            in:scale={{ duration: 800, delay: i * 200 }}
-          >
-            <div class="text-4xl mb-4">{factor.icon}</div>
-            <h3 class="text-xl font-semibold mb-4">{factor.title}</h3>
-            <p class="text-gray-600">{factor.description}</p>
-          </div>
-        {/each}
-      {/if}
-    </div>
-  </div>
-</section>
-
-<div class="divider"/>
-
-
 <section class="py-16 ">
   <div class="container mx-auto px-4 text-center">
     <h2 class="text-3xl font-bold mb-4">Experience MobileGreaser In Action</h2>

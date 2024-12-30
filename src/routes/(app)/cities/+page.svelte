@@ -14,7 +14,6 @@
     }
   ];
 
-  // Generate dynamic meta description
   const cityCount = operatingCities.reduce((acc, state) => acc + state.cities.length, 0);
   const metaDescription = `Find mobile mechanics in ${cityCount} cities across ${operatingCities.length} states. MobileGreaser offers 24/7 on-demand auto repair services with flat-rate pricing in ${operatingCities.map(state => state.state).join(' and ')}.`;
 </script>

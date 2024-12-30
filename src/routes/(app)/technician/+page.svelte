@@ -1,5 +1,13 @@
 <script>
-  import { DollarSign, Clock, ChevronDown, WrenchIcon } from "lucide-svelte";
+  import {
+    DollarSign,
+    Clock,
+    ChevronDown,
+    WrenchIcon,
+    BadgeDollarSign,
+    LucideBadgeDollarSign,
+    LucideClock, LucideWrench
+  } from "lucide-svelte";
   import { toast } from '@zerodevx/svelte-toast'
 
   let isOpen = {}
@@ -93,21 +101,21 @@
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <div class="text-center p-6">
           <div class="w-16 h-16 mx-auto mb-4 border-gray-800 rounded-full flex items-center justify-center">
-            <DollarSign class="w-8 h-8 text-[#44D5B4]" />
+            <LucideBadgeDollarSign class="w-8 h-8 text-[#161A1D]" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Reliable Earnings</h3>
           <p class="text-gray-600">Make money reliably and achieve your financial goals.</p>
         </div>
         <div class="text-center p-6">
           <div class="w-16 h-16 mx-auto mb-4  rounded-full flex items-center justify-center">
-            <Clock class="w-8 h-8 text-[#44D5B4]" />
+            <LucideClock class="w-8 h-8 text-[#161A1D]" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Flexible Schedule</h3>
           <p class="text-gray-600">work whenever you want, as much as you want.</p>
         </div>
         <div class="text-center p-6">
           <div class="w-16 h-16 mx-auto mb-4 rounded-full flex items-center justify-center">
-            <WrenchIcon class="w-8 h-8 text-[#44D5B4]" />
+            <LucideWrench class="w-8 h-8 text-[#161A1D]" />
           </div>
           <h3 class="text-xl font-semibold mb-2">Easy to Get Started</h3>
           <p class="text-gray-600">Sign up today and start earning in no time.</p>

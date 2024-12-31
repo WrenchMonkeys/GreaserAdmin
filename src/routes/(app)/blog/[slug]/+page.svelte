@@ -33,33 +33,7 @@
     {/each}
   {/if}
 
-  <script type="application/ld+json">
-    `{
-      "@context": "https://schema.org",
-      "@type": "Article",
-      "headline": "${data.meta.title}",
-      "description": "${data.meta.description}",
-      "image": "${data.meta.image}",
-      "author": {
-      "@type": "Organization",
-        "name": "MobileGreaser"
-    },
-      "publisher": {
-      "@type": "Organization",
-        "name": "MobileGreaser",
-        "logo": {
-        "@type": "ImageObject",
-          "url": "https://mobilegreaser.com/mobile_greaser_banner.jpg"
-      }
-    },
-      "datePublished": "${data.meta.date}",
-      "dateModified": "${data.meta.date}",
-      "mainEntityOfPage": {
-      "@type": "WebPage",
-        "@id": "https://mobilegreaser.com/blog/${data.slug}"
-      }
-    }`
-  </script>
+  <script type="application/ld+json" src="/api/posts/{data.slug}/schema"/>
 
 </svelte:head>
 

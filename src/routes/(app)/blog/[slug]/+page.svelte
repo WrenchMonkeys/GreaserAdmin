@@ -1,7 +1,16 @@
 <script lang="ts">
+  import Breadcrumb from "$lib/components/BreadCrumb.svelte";
+  import { derived } from "svelte/store";
+  import { page } from "$app/stores";
+
   const { data } = $$props
 
   $: component = data.content
+
+  const breadcrumbItems = derived(page, ($pageData) => [
+    { text: 'Blog', href: '/blog' },
+    { text: `${data.meta.title}` }
+  ]);
 </script>
 
 <svelte:head>
@@ -12,8 +21,9 @@
   <meta property="keywords" content={data.meta.categories} />
 </svelte:head>
 
-<div class="container min-h-full mx-auto grow my-9 p-3">
-  <article class="sm:mt-4 md:mt-9">
+<div class="container min-h-full mx-auto grow p-3">
+  <Breadcrumb items={$breadcrumbItems} />
+  <article class="sm:mt-4 md:mt-9 my-9">
     <hgroup class="mb-4">
       <h1 class="text-2xl lg:text-4xl font-semibold">{data.meta.title}</h1>
       <p class="text-sm my-2">{data.meta.description}</p>

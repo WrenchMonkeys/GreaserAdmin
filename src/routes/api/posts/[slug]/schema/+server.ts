@@ -7,9 +7,9 @@ export const GET: RequestHandler = async ({ params }) => {
 	return json({
 		'@context': 'https://schema.org',
 		'@type': 'Article',
-		headline: `"${post.metadata.title}"`,
-		description: `"${post.metadata.description}"`,
-		image: `"${post.metadata.image}"`,
+		headline: post.metadata.title,
+		description: post.metadata.description,
+		image: post.metadata.image,
 		author: {
 			'@type': 'Organization',
 			name: 'MobileGreaser'
@@ -22,11 +22,11 @@ export const GET: RequestHandler = async ({ params }) => {
 				url: 'https://mobilegreaser.com/mobile_greaser_banner.jpg'
 			}
 		},
-		datePublished: `"${post.metadata.date}"`,
-		dateModified: `"${post.metadata.date}"`,
+		datePublished: post.metadata.date,
+		dateModified: post.metadata.date,
 		mainEntityOfPage: {
 			'@type': 'WebPage',
-			'@id': `"https://mobilegreaser.com/blog/${params.slug}"`
+			'@id': `https://mobilegreaser.com/blog/${params.slug}`
 		}
 	});
 };

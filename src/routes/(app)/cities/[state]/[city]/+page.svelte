@@ -61,9 +61,9 @@
   </script>
 </svelte:head>
 
-<main class="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
-  <div class="max-w-4xl mx-auto">
-    <Breadcrumb items={breadcrumbItems} />
+<main class="min-h-screen px-4 sm:px-6 lg:px-8">
+  <Breadcrumb items={breadcrumbItems} />
+  <div class="max-w-4xl mx-auto py-12">
     <header class="text-center mb-12">
       <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
         Mobile Mechanic in {data.city}, {data.state}

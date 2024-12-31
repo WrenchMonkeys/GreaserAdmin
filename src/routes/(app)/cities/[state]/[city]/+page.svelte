@@ -1,4 +1,3 @@
-<!-- src/routes/cities/[state]/[city]/+page.svelte -->
 <script lang="ts">
   import { page } from '$app/stores';
   import Breadcrumb from '$lib/components/BreadCrumb.svelte';
@@ -62,7 +61,7 @@
   </script>
 </svelte:head>
 
-<main class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
+<main class="min-h-screen  py-12 px-4 sm:px-6 lg:px-8">
   <div class="max-w-4xl mx-auto">
     <Breadcrumb items={breadcrumbItems} />
     <header class="text-center mb-12">

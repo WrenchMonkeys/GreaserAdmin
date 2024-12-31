@@ -46,8 +46,6 @@ published: true
 
 ![Tire inspection](/hand_on_tire.jpg)
 
-# The Ultimate Guide to Tire Inspection & Replacement: Expert Tips from Mobile Mechanics
-
 *Need emergency tire service? Download the MobileGreaser app for instant access to certified mobile mechanics in your area.*
 
 ## Quick Navigation

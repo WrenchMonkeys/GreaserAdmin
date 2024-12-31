@@ -9,7 +9,7 @@
 
   const breadcrumbItems = derived(page, ($pageData) => [
     { text: 'Blog', href: '/blog' },
-    { text: `${data.meta.title}` }
+    { text: `${data.slug}` }
   ]);
 </script>
 
@@ -19,6 +19,48 @@
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="keywords" content={data.meta.categories} />
+  <meta name="author" content="MobileGreaser">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+  <link rel="canonical" href={`https://mobilegreaser.com/blog/${data.slug}`}>
+  <meta property="article:published_time" content={data.meta.date}>
+  <meta property="article:modified_time" content={data.meta.date}>
+  <meta property="article:author" content="MobileGreaser">
+  <meta property="article:section" content="Auto Maintenance">
+  {#if data.meta.tags != null}
+    {#each data.meta.tags as tag}
+      <meta property="article:tag" content={tag}/>
+    {/each}
+  {/if}
+
+  <script type="application/ld+json">
+    `{
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "${data.meta.title}",
+      "description": "${data.meta.description}",
+      "image": "${data.meta.image}",
+      "author": {
+      "@type": "Organization",
+        "name": "MobileGreaser"
+    },
+      "publisher": {
+      "@type": "Organization",
+        "name": "MobileGreaser",
+        "logo": {
+        "@type": "ImageObject",
+          "url": "https://mobilegreaser.com/mobile_greaser_banner.jpg"
+      }
+    },
+      "datePublished": "${data.meta.date}",
+      "dateModified": "${data.meta.date}",
+      "mainEntityOfPage": {
+      "@type": "WebPage",
+        "@id": "https://mobilegreaser.com/blog/${data.slug}"
+      }
+    }`
+  </script>
+
 </svelte:head>
 
 <div class="container min-h-full mx-auto grow p-3">
@@ -31,7 +73,14 @@
     </hgroup>
 
     <div class="tags">
-      <span class="badge badge-accent m-1 text-xs font-light ">&num; Mobile Mechanic</span>
+      {#if data.meta.tags != null}
+        {#each data.meta.tags as tag}
+          <span class="badge badge-accent m-1 text-xs font-light ">&num;{tag}</span>
+
+        {/each}
+      {:else}
+        <span class="badge badge-accent m-1 text-xs font-light ">#Mobile Mechanic</span>
+      {/if}
     </div>
     <div class="prose mx-auto">
       <svelte:component this={component}/>

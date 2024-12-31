@@ -143,29 +143,6 @@
     }
   ];
 
-  const trustFactors = [
-    {
-      title: 'Certified Mechanics',
-      description: 'ASE-certified and thoroughly vetted professionals',
-      icon: '👨‍🔧'
-    },
-    {
-      title: 'Convenient Service',
-      description: 'Service at your preferred location',
-      icon: '📍'
-    },
-    {
-      title: 'Transparent Pricing',
-      description: 'Upfront quotes with no hidden fees',
-      icon: '💰'
-    },
-    {
-      title: 'Service Guarantee',
-      description: 'Parts and labor warranty included',
-      icon: '✅'
-    }
-  ];
-
   function openModal() {
     isModalOpen = true;
   }

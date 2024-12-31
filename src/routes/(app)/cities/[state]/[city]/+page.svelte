@@ -65,7 +65,7 @@
   <div class="max-w-4xl mx-auto">
     <Breadcrumb items={breadcrumbItems} />
     <header class="text-center mb-12">
-      <h1 class="text-4xl font-bold text-gray-900 mb-4">
+      <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
         Mobile Mechanic in {data.city}, {data.state}
       </h1>
       <p class="text-xl text-gray-600">

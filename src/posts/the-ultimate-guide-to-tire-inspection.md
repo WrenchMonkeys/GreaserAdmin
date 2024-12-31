@@ -217,7 +217,7 @@ Proper tire maintenance is crucial for your safety and vehicle performance. Our 
    - Transparent quotes
    - No hidden fees
 
-> **Download MobileGreaser Today**: Experience the convenience of mobile tire service. Available in [may regions](/cities).
+> **Download MobileGreaser Today**: Experience the convenience of mobile tire service. Available in [many cities](/cities).
 
 ## Call to Action
 

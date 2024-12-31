@@ -9,8 +9,8 @@
       <nav class="navbar flex-col md:flex-row sticky p-2 bg-base-200">
         <div class="md:navbar-start">
           <a class="btn btn-ghost normal-case text-xl whitespace-nowrap" href="/">Mobile Greaser</a>
-          <a class="link link-hover p-2" aria-current="page" href="/">Home</a>
-          <a class="link link-hover p-2" aria-current="page" href="/technician">Join as a technician</a>
+          <a class="link link-hover link-primary p-2" aria-current="page" href="/">Home</a>
+          <a class="link link-hover link-primary p-2" aria-current="page" href="/technician">Join as a technician</a>
         </div>
         <div class="navbar-center"></div>
         <div class="md:navbar-end mt-6 md:mt-0">

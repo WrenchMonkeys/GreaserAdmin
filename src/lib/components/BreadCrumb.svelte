@@ -5,26 +5,9 @@
     text: string;
     href?: string;
   }[] = [];
-
-  const schemaData = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": items.map((item, index) => ({
-      "@type": "ListItem",
-      "position": index + 1,
-      "item": {
-        "@id": item.href ? `https://mobilegreaser.com${item.href}` : undefined,
-        "name": item.text
-      }
-    }))
-  };
 </script>
 
 <nav aria-label="Breadcrumb" class="mb-6">
-  <script type="application/ld+json">
-    {JSON.stringify(schemaData)}
-  </script>
-
   <ol class="flex items-center space-x-2 text-sm">
     <li>
       <a

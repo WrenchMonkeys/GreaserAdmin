@@ -61,7 +61,7 @@
   </script>
 </svelte:head>
 
-<main class="min-h-screen px-4 sm:px-6 lg:px-8">
+<main class="container mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
   <Breadcrumb items={breadcrumbItems} />
   <div class="max-w-4xl mx-auto py-12">
     <header class="text-center mb-12">

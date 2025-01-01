@@ -27,6 +27,10 @@
   <title>Mobile Mechanic in {city}, {state} | MobileGreaser</title>
   <meta name="description" content="Professional mobile mechanics available 24/7 in {city}, {state}. On-demand auto repair at your location with upfront pricing. Book in minutes!" />
   <link rel="canonical" href={`https://mobilegreaser.com${$page.url.pathname}`} />
+  <meta name="geo.region" content="US-NV">
+  <meta name="geo.placename" content="Mesquite">
+  <meta name="geo.position" content="36.805278;-114.066944">
+  <meta name="ICBM" content="36.805278, -114.066944">
 
   <script type="application/ld+json" src="{`/api/cities/${data.state}/${data.name}/schema`}"/>
 </svelte:head>

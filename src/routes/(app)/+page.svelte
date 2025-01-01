@@ -155,6 +155,14 @@
 
 </script>
 
+<svelte:head>
+  <title>Mobile Greaser | Hassle-Free Mobile Car Repairs and Maintenance | Mobile mechanic near me</title>
+  <meta property="og:title" content="Mobile Greaser">
+  <meta property="og:description" content="Skip the auto shop! Mobile Greaser brings expert mechanics to your location. Affordable, reliable car service when you need it. Join the waitlist today!">
+  <meta name="description" content="Skip the auto shop! Mobile Greaser brings expert mechanics to your location. Affordable, reliable car service when you need it. Join the waitlist today!">
+  <meta name="keywords" content="Mobile Greaser, Mobile Mechanics, On Demand Mechanics, Mobile Auto Repair, Mobile Car Repair, Mobile Oil Change, Mobile Brake Repair, Mobile Tire Repair, Mobile Vehicle Maintenance, Mobile Auto Maintenance, Mobile Car Maintenance, Mobile Auto Service, Mobile Car Service, Mobile Vehicle Service, Mobile Auto Inspection, Mobile Car Inspection, Mobile Vehicle Inspection, Mobile Auto Diagnostics, Mobile Car Diagnostics, Mobile Vehicle Diagnostics, Mobile Auto Repair Service, Mobile Car Repair Service, Mobile Vehicle Repair Service, Mobile Auto Maintenance Service, Mobile Car Maintenance Service, Mobile Vehicle Maintenance Service, Mobile Auto Service Service, Mobile Car Service Service, Mobile Vehicle Service Service, Mobile Auto Inspection Service, Mobile Car Inspection Service, Mobile Vehicle Inspection Service, Mobile Auto Diagnostics Service, Mobile Car Diagnostics Service, Mobile Vehicle Diagnostics Service, Auto Repair, Mobile Mechanic Near Me, Mobile Mechanic Oklahoma, Mobile Mechanic Okalhoma City Oklahoma, Mobile Mechanic Tulsa Oklahoma, Mobile Mechanic Near Me OKC, Mobile Mechanic Las Vegas Nevada, Mobile Mechanic Nevada, At-home oil change, Car maintenance app, Real-time service updates, Winter car maintenance tips">
+</svelte:head>
+
 <div class="container mx-auto">
   <section class="relative " aria-label="Mobile Mechanic Services">
     <div class="flex flex-col items-center md:flex-row before:bg-[url('/mesh_grid.png')] relative before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-cover before:bg-center before:opacity-10 before:z-[1]">

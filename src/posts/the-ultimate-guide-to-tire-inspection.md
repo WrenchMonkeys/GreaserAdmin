@@ -240,9 +240,8 @@ Don't wait for a tire emergency to happen. Download the MobileGreaser app now an
 *This guide is regularly updated with the latest tire maintenance recommendations. Last updated: [12/31/2024]*
 
 ### Additional Resources
-- [Tire Safety Guide](#)
-- [Vehicle Maintenance Tips](#)
-- [Emergency Service FAQ](/)
+- [Tire Safety Guide](/blog/the-complete-tire-safety-guide)
+- [Vehicle Maintenance Tips](/blog/essential-vehicle-maintenance-guide)
 - [MobileGreaser Service Areas](/cities)
 
 *Download MobileGreaser now for instant access to mobile tire services and expert mechanical assistance.*

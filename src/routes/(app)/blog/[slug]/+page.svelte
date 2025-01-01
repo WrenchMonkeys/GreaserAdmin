@@ -27,6 +27,9 @@
   <meta property="article:modified_time" content={data.meta.date}>
   <meta property="article:author" content="MobileGreaser">
   <meta property="article:section" content="Auto Maintenance">
+  {#if data.meta.image != null}
+    <meta name="twitter:image" content={`https://mobilegreaser.com/${data.meta.image}`} />
+  {/if}
   {#if data.meta.tags != null}
     {#each data.meta.tags as tag}
       <meta property="article:tag" content={tag}/>

@@ -3,7 +3,7 @@
   import { derived } from "svelte/store";
   import { page } from "$app/stores";
 
-  const { data } = $$props
+  export let data;
 
   $: component = data.content
 

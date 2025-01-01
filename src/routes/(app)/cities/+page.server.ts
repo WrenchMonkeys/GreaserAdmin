@@ -22,7 +22,5 @@ export const load: PageServerLoad = async ({ fetch }) => {
 		};
 	});
 
-	console.log(operatingCities);
-
 	return { operatingCities };
 };

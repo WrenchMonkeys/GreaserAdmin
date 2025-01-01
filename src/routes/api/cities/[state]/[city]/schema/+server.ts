@@ -1,6 +1,6 @@
 import type { RequestHandler } from './$types';
 import { json } from '@sveltejs/kit';
-import type { CityDetail } from '$lib/models/cityDetails';
+import { isCityDetail } from '$lib/utils';
 
 export const GET: RequestHandler = async ({ params, fetch }) => {
 	const { state, city } = params;
@@ -13,7 +13,7 @@ export const GET: RequestHandler = async ({ params, fetch }) => {
 
 	const details = await response.json();
 
-	if (isCityDetails(details)) {
+	if (isCityDetail(details)) {
 		return json({
 			'@context': 'https://schema.org',
 			'@type': 'AutoRepair',
@@ -46,6 +46,3 @@ export const GET: RequestHandler = async ({ params, fetch }) => {
 
 	return new Response('City not found', { status: 404 });
 };
-
-const isCityDetails = (data: unknown): data is CityDetail =>
-	(data as CityDetail)?.name != null && (data as CityDetail)?.state != null;

@@ -1,21 +1,14 @@
 <script lang="ts">
   import { page } from '$app/stores';
 
-  const operatingCities = [
-    {
-      state: 'Oklahoma',
-      cities: ['Oklahoma City', 'Tulsa'],
-      description: 'Professional mobile mechanic services available throughout Oklahoma'
-    },
-    {
-      state: 'Nevada',
-      cities: ['Las Vegas', 'Mesquite', 'Henderson', 'Laughlin'],
-      description: 'Expert mobile auto repair services across Nevada'
-    }
-  ];
+  export let data;
 
-  const cityCount = operatingCities.reduce((acc, state) => acc + state.cities.length, 0);
-  const metaDescription = `Find mobile mechanics in ${cityCount} cities across ${operatingCities.length} states. MobileGreaser offers 24/7 on-demand auto repair services with flat-rate pricing in ${operatingCities.map(state => state.state).join(' and ')}.`;
+  $: operatingCities = data?.operatingCities ?? [];
+
+  console.log(data);
+
+  const cityCount = operatingCities?.reduce((acc, state) => acc + state.cities.length, 0);
+  const metaDescription = `Find mobile mechanics in ${cityCount} cities across ${operatingCities?.length} states. MobileGreaser offers 24/7 on-demand auto repair services with flat-rate pricing in ${operatingCities?.map(state => state.state).join(' and ')}.`;
 </script>
 
 <svelte:head>
@@ -29,22 +22,7 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content={`https://mobilegreaser.com${$page.url.pathname}`} />
 
-  <script type="application/ld+json">
-    {JSON.stringify({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "MobileGreaser",
-      "url": `https://mobilegreaser.com${$page.url.pathname}`,
-      "areaServed": operatingCities.map(state => ({
-        "@type": "State",
-        "name": state.state,
-        "containsPlace": state.cities.map(city => ({
-          "@type": "City",
-          "name": city
-        }))
-      }))
-    })}
-  </script>
+  <script type="application/ld+json" src="/api/cities/schema"/>
 </svelte:head>
 
 <main class="min-h-screen bg-gray-100 py-12 px-4 sm:px-6 lg:px-8">
@@ -59,10 +37,9 @@
     </header>
 
     <section class="bg-white shadow overflow-hidden sm:rounded-lg" aria-label="Service Areas">
-      {#each operatingCities as { state, cities, description }}
+      {#each operatingCities as { state, cities }}
         <div class="px-4 py-5 sm:px-6 border-b border-gray-200">
           <h2 class="text-2xl leading-6 font-medium text-gray-900 mb-2">{state} Service Areas</h2>
-          <p class="text-gray-600 mb-4">{description}</p>
 
           <ul class="mt-3 grid grid-cols-1 gap-3 sm:grid-cols-2" role="list">
             {#each cities as city}

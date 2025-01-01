@@ -18,7 +18,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
 			cities: Object.values(cityDetails[key])
 				.filter(isCityDetail)
 				.map((cityDetail: CityDetail) => cityDetail.name),
-			state: key
+			state: key[0].toUpperCase() + key.slice(1)
 		};
 	});
 

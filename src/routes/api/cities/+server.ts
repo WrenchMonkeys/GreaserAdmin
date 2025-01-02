@@ -68,6 +68,7 @@ const cityDetails: CityDetails = {
 			lat: '36.83306265524464',
 			long: '-114.11253419007807',
 			area: 50,
+			image: '/sun_city_mesquite.jpeg',
 			geoRegion: 'US-NV',
 			operationStartDate: '2021-03-01',
 			activePartners: 2,

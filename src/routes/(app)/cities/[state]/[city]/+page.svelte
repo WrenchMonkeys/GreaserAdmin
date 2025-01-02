@@ -39,7 +39,7 @@
   <Breadcrumb items={$breadcrumbItems} />
   <div class="max-w-4xl mx-auto py-12">
     {#if data.image}
-      <img src={data.image} class="mb-9 border rounded-lg" alt={`${data.name}, ${data.state}`} />
+      <img src={data.image} class="mb-9 border rounded-lg mx-auto image-full" alt={`${data.name}, ${data.state}`} />
     {/if}
     <header class="text-center mb-12">
       <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">

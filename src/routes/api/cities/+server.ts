@@ -45,12 +45,24 @@ const cityDetails: CityDetails = {
 			lat: '36.80397921495777',
 			long: '-114.07540728518919',
 			area: 50,
+			image: '/mesquite_nv.jpg',
 			geoRegion: 'US-NV',
 			operationStartDate: '2021-03-01',
 			activePartners: 2,
 			averageResponseTime: '40 minutes'
 		},
-		'sun-city': {
+		bunkerville: {
+			name: 'Bunkerville',
+			state: 'Nevada',
+			lat: '36.77273452927768',
+			long: '-114.12894760290921',
+			area: 50,
+			geoRegion: 'US-NV',
+			operationStartDate: '2021-03-01',
+			activePartners: 2,
+			averageResponseTime: '40 minutes'
+		},
+		'sun-city, mesquite': {
 			name: 'Sun City, Mesquite',
 			state: 'Nevada',
 			lat: '36.83306265524464',
@@ -61,7 +73,7 @@ const cityDetails: CityDetails = {
 			activePartners: 2,
 			averageResponseTime: '40 minutes'
 		},
-		Henderson: {
+		henderson: {
 			name: 'Henderson',
 			state: 'Nevada',
 			lat: '36.83306265524464',
@@ -72,11 +84,33 @@ const cityDetails: CityDetails = {
 			activePartners: 1,
 			averageResponseTime: '40 minutes'
 		},
-		Laughlin: {
-			name: 'Laughlin',
+		logandale: {
+			name: 'Logandale',
 			state: 'Nevada',
-			lat: '36.83306265524464',
-			long: '-114.11253419007807',
+			lat: '36.59955342781023',
+			long: '-114.48319114089331',
+			area: 50,
+			geoRegion: 'US-NV',
+			operationStartDate: '2021-03-01',
+			activePartners: 2,
+			averageResponseTime: '40 minutes'
+		},
+		overton: {
+			name: 'Overton',
+			state: 'Nevada',
+			lat: '36.54354993666659',
+			long: '-114.44783887340188',
+			area: 50,
+			geoRegion: 'US-NV',
+			operationStartDate: '2021-03-01',
+			activePartners: 2,
+			averageResponseTime: '40 minutes'
+		},
+		moapa: {
+			name: 'Moapa',
+			state: 'Nevada',
+			lat: '36.69115386247003',
+			long: '-114.59111594269477',
 			area: 50,
 			geoRegion: 'US-NV',
 			operationStartDate: '2021-03-01',

@@ -38,6 +38,9 @@
 <main class="container mx-auto min-h-screen px-4 sm:px-6 lg:px-8">
   <Breadcrumb items={$breadcrumbItems} />
   <div class="max-w-4xl mx-auto py-12">
+    {#if data.image}
+      <img src={data.image} class="mb-9 border rounded-lg" alt={`${data.name}, ${data.state}`} />
+    {/if}
     <header class="text-center mb-12">
       <h1 class="text-2xl md:text-4xl font-bold text-gray-900 mb-4">
         Mobile Mechanic in {city}, {state}

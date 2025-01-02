@@ -11,6 +11,12 @@
     { text: 'Blog', href: '/blog' },
     { text: `${data.slug}` }
   ]);
+
+  const handleResourceDownload = (filename: string) => {
+    const file = fetch(`/api/resources/${filename}`);
+
+
+  }
 </script>
 
 <svelte:head>
@@ -19,7 +25,6 @@
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
   <meta property="keywords" content={data.meta.categories} />
-  <meta name="author" content="MobileGreaser">
   <meta name="robots" content="index, follow">
   <meta name="language" content="English">
   <link rel="canonical" href={`https://mobilegreaser.com/blog/${data.slug}`}>
@@ -27,8 +32,11 @@
   <meta property="article:modified_time" content={data.meta.date}>
   <meta property="article:author" content="MobileGreaser">
   <meta property="article:section" content="Auto Maintenance">
+  <meta name="twitter:title" content={data.meta.title} />
+  <meta name="twitter:description" content={data.meta.description} />
   {#if data.meta.image != null}
     <meta name="twitter:image" content={`https://mobilegreaser.com/${data.meta.image}`} />
+    <meta name="twitter:card" content={`https://mobilegreaser.com/${data.meta.image}`}>
   {/if}
   {#if data.meta.tags != null}
     {#each data.meta.tags as tag}
@@ -62,5 +70,10 @@
     <div class="prose mx-auto">
       <svelte:component this={component}/>
     </div>
+    {#if data.meta.resource != null}
+      <div class="flex items-center justify-center mt-10">
+        <a class="btn btn-primary bg-[#44D5B4] hover:bg-[#44D5B4] text-[#161A1D] transition-all duration-300 hover:scale-105 transform" target="_blank" href={`/api/resources/${data.meta.resource}`}>Click to download the resource</a>
+      </div>
+    {/if}
   </article>
 </div>

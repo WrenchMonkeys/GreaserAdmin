@@ -4,6 +4,7 @@ export interface CityDetail {
 	lat: string;
 	long: string;
 	area: number;
+	geoRegion: string;
 	operationStartDate: string;
 	activePartners: number;
 	averageResponseTime: string;

@@ -11,6 +11,7 @@ const cityDetails: CityDetails = {
 			lat: '35.46713139803142',
 			long: '-97.51641715154447',
 			operationStartDate: '2020-03-15',
+			geoRegion: 'US-OK',
 			activePartners: 1,
 			averageResponseTime: '30 minutes'
 		},
@@ -20,6 +21,7 @@ const cityDetails: CityDetails = {
 			lat: '36.15098489736459',
 			long: '-95.98843029338072',
 			area: 100,
+			geoRegion: 'US-OK',
 			operationStartDate: '2020-06-01',
 			activePartners: 1,
 			averageResponseTime: '35 minutes'
@@ -32,6 +34,7 @@ const cityDetails: CityDetails = {
 			lat: '36.17430449224278',
 			long: '-115.15484529348839',
 			area: 100,
+			geoRegion: 'US-NV',
 			operationStartDate: '2021-01-10',
 			activePartners: 1,
 			averageResponseTime: '25 minutes'
@@ -42,6 +45,40 @@ const cityDetails: CityDetails = {
 			lat: '36.80397921495777',
 			long: '-114.07540728518919',
 			area: 50,
+			geoRegion: 'US-NV',
+			operationStartDate: '2021-03-01',
+			activePartners: 2,
+			averageResponseTime: '40 minutes'
+		},
+		'sun-city': {
+			name: 'Sun City, Mesquite',
+			state: 'Nevada',
+			lat: '36.83306265524464',
+			long: '-114.11253419007807',
+			area: 50,
+			geoRegion: 'US-NV',
+			operationStartDate: '2021-03-01',
+			activePartners: 2,
+			averageResponseTime: '40 minutes'
+		},
+		Henderson: {
+			name: 'Henderson',
+			state: 'Nevada',
+			lat: '36.83306265524464',
+			long: '-114.11253419007807',
+			area: 50,
+			geoRegion: 'US-NV',
+			operationStartDate: '2021-03-01',
+			activePartners: 1,
+			averageResponseTime: '40 minutes'
+		},
+		Laughlin: {
+			name: 'Laughlin',
+			state: 'Nevada',
+			lat: '36.83306265524464',
+			long: '-114.11253419007807',
+			area: 50,
+			geoRegion: 'US-NV',
 			operationStartDate: '2021-03-01',
 			activePartners: 2,
 			averageResponseTime: '40 minutes'

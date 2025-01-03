@@ -13,7 +13,10 @@ export const GET: RequestHandler = async ({ params, fetch }) => {
 
 	const cityDetails = await resp.json();
 
-	const details = cityDetails[state.toLowerCase().trim()]?.[city.toLowerCase().trim()];
+	const details =
+		cityDetails[state.toLowerCase().trim().replaceAll(' ', '-')]?.[
+			city.toLowerCase().trim().replaceAll(' ', '-')
+		];
 
 	if (details) {
 		return json(details);

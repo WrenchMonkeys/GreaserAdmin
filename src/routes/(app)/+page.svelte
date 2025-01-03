@@ -156,11 +156,21 @@
 </script>
 
 <svelte:head>
-  <title>Mobile Greaser | Hassle-Free Mobile Car Repairs and Maintenance | Mobile mechanic near me</title>
-  <meta property="og:title" content="Mobile Greaser">
-  <meta property="og:description" content="Skip the auto shop! Mobile Greaser brings expert mechanics to your location. Affordable, reliable car service when you need it. Join the waitlist today!">
-  <meta name="description" content="Skip the auto shop! Mobile Greaser brings expert mechanics to your location. Affordable, reliable car service when you need it. Join the waitlist today!">
-  <meta name="keywords" content="Mobile Greaser, Mobile Mechanics, On Demand Mechanics, Mobile Auto Repair, Mobile Car Repair, Mobile Oil Change, Mobile Brake Repair, Mobile Tire Repair, Mobile Vehicle Maintenance, Mobile Auto Maintenance, Mobile Car Maintenance, Mobile Auto Service, Mobile Car Service, Mobile Vehicle Service, Mobile Auto Inspection, Mobile Car Inspection, Mobile Vehicle Inspection, Mobile Auto Diagnostics, Mobile Car Diagnostics, Mobile Vehicle Diagnostics, Mobile Auto Repair Service, Mobile Car Repair Service, Mobile Vehicle Repair Service, Mobile Auto Maintenance Service, Mobile Car Maintenance Service, Mobile Vehicle Maintenance Service, Mobile Auto Service Service, Mobile Car Service Service, Mobile Vehicle Service Service, Mobile Auto Inspection Service, Mobile Car Inspection Service, Mobile Vehicle Inspection Service, Mobile Auto Diagnostics Service, Mobile Car Diagnostics Service, Mobile Vehicle Diagnostics Service, Auto Repair, Mobile Mechanic Near Me, Mobile Mechanic Oklahoma, Mobile Mechanic Okalhoma City Oklahoma, Mobile Mechanic Tulsa Oklahoma, Mobile Mechanic Near Me OKC, Mobile Mechanic Las Vegas Nevada, Mobile Mechanic Nevada, At-home oil change, Car maintenance app, Real-time service updates, Winter car maintenance tips">
+  <title>Mobile Mechanic Near Me | 24/7 On-Site Auto Repair | Mobile Greaser</title>
+  <meta name="description" content="Expert mobile mechanics available 24/7 in Oklahoma City, Tulsa, and Las Vegas. Same-day service, ASE-certified technicians, and 5000-mile warranty on all repairs. Book your mobile auto repair today!">
+  <meta name="keywords" content="mobile mechanic near me, mobile auto repair, on-site car repair, mobile mechanic Oklahoma City, mobile mechanic Tulsa, mobile mechanic Las Vegas, mobile oil change, emergency car repair, ASE certified mobile mechanic">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Mobile Greaser">
+  <meta property="og:title" content="24/7 Mobile Auto Repair | Professional Mechanics Come to You">
+  <meta property="og:description" content="Expert mobile mechanics bring the auto shop to your location. Licensed technicians, fair pricing, and guaranteed work. Available 24/7 in OKC, Tulsa, and Las Vegas.">
+  <meta property="og:image" content="/mobile_greaser_banner.jpg">
+  <meta property="og:url" content="https://mobilegreaser.com">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Mobile Auto Repair at Your Location | Mobile Greaser">
+  <meta name="twitter:description" content="Professional mechanics come to you. Available 24/7 for all auto repair needs. Book now!">
+  <meta name="twitter:image" content="/mobile_greaser_banner.jpg">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://mobilegreaser.com">
 </svelte:head>
 
 <div class="container mx-auto">

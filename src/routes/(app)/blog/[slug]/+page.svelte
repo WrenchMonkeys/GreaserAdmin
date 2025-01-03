@@ -21,6 +21,7 @@
 
 <svelte:head>
   <title>Mobile Greaser | {data.meta.title}</title>
+  <meta property="description" content={data.meta.description} />
   <meta property="og:type" content="article" />
   <meta property="og:title" content={data.meta.title} />
   <meta property="og:description" content={data.meta.description} />
